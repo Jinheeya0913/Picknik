@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* *{
+	font: inherit;
+	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	background-color: blue;
+	/*  #faf8f0;} */
+
+
+.outer_footer{
+	width: 100px;
+	height: 100px;
+}
+
+.container {
+	background-color: aquamarine;
+	width:80px;
+	height: 100px; 
+}
+
+
+.inner_footer_bottom{
+	background-color: blue;
+	width:80px;
+	height: 30px;
+}
