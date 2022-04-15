@@ -7,6 +7,11 @@ body{
     padding-top:54px;
     overflow-x: hidden;;
 }
+
+.side-menu{
+    display: none;
+}
+
 body.home{
     background-color:#000;
     color:white;
@@ -18,8 +23,11 @@ input{
 
 /* layout */
 .container{
+    display: flex;
+    flex-direction: row;
     width:auto;
     margin:0 12px;
+
 }
 .row{
     margin-left:-8px;
@@ -427,6 +435,30 @@ div img{
     }
     .col-lg-3>.row>.col-lg-2{
         width:66.6%;
+    }
+
+    /*side menu*/
+    .side-menu{
+        display: block;
+        margin-right: 20px;
+    }
+
+    #side_title{
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    .list_link{
+        margin-bottom: 10px;
+    }
+
+    .side_list_p{
+        font-size: 1.5rem;
+    }
+
+    #side_lise_2{
+        font-weight: bold;
     }
 
 
