@@ -78,13 +78,14 @@ button {
 
 /*글꼴*/
 
-.btn_title{
+.slider_title{
 	color: white;
 }
 
-.btn_title:hover{
+.slider_title:hover{
 	color: #64b5f6;
 }
+
 
 
 
