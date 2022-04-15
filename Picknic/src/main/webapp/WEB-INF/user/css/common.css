@@ -1,0 +1,17 @@
+*{
+    margin: 0; padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+}
+
+.wrap{
+    display: flex;
+    width: 1200px;
+    height: 1200px;
+}
+
+.container{
+    background-color: dimgray;
+    width: 100%;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0143)http://localhost:63342/Picknic/src/main/webapp/WEB-INF/user/views/exhibit_before.html?_ijt=42l8nosknc8k77cdd105op0vlo&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <meta name="viewport" content="width=clevice-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="./Exhibition Before_files/exhibition_before.css">
+
+  <title>Exhibition Before</title>
+
+</head>
+
+<body>
+
+  <div class="header">
+  </div>
+  
+  <div class="container">
+   <ul class="gallery"> 
+    <li><img src="./Exhibition Before_files/article_1.png"></li> 
+    <li><img src="./Exhibition Before_files/article_2.png"></li> 
+    <li><img src="./Exhibition Before_files/article_3.png"></li> 
+    <li><img src="./Exhibition Before_files/article_4.png"></li> 
+    <li><img src="./Exhibition Before_files/article_1.png"></li> 
+    <li><img src="./Exhibition Before_files/article_2.png"></li> 
+    <li><img src="./Exhibition Before_files/article_3.png"></li> 
+    <li><img src="./Exhibition Before_files/article_4.png"></li> 
+    <li><img src="./Exhibition Before_files/article_1.png"></li>
+  </ul> 
+</div>
+
+
+
+
+
+
+<!--        <ul class="article_box_03">-->
+  <!--        <a href="">-->
+    <!--          <li class="article_list">-->
+      <!--            <img id= "img_07" class="article_img" src="../resources/article_1.png">-->
+      <!--            <p class="article_title">하이</p>-->
+      <!--          </li>-->
+      <!--        </a>-->
+      <!--        <a href="">-->
+        <!--          <li class="article_list">-->
+          <!--            <img id= "img_08" class="article_img" src="../resources/article_2.png">-->
+          <!--            <p class="article_title">하이</p>-->
+          <!--          </li>-->
+          <!--        </a>-->
+          <!--        <a href="">-->
+            <!--          <li class="article_list">-->
+              <!--            <img id="img_09" class="article_img" src="../resources/article_3.png">-->
+              <!--            <p class="article_title">하이</p>-->
+              <!--          </li>-->
+              <!--        </a>-->
+              <!--        </ul>-->
+
+
+
+
+
+            
+            
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + '/jb-server-page?reloadServiceClientId=927');
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

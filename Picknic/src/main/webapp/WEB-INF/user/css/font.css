@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Univers';
+    src: url('1475956/6510377f-160a-4f66-aec0-2b71f05e9736.eot');
+    src: url('1475956/6510377f-160a-4f66-aec0-2b71f05e9736.eot?#iefix') format('embedded-opentype'),
+    url('1475956/5c8d59c2-9c85-4a22-88e3-bf3fba01dcd8.woff2') format('woff2'),
+    url('1475956/fc51d03b-0d7d-45df-9415-3c6270c80749.woff') format('woff'),
+    url('1475956/74bdff6d-c5de-42e8-a4d8-11ea14eddb22.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers';
+    src: url('1475968/38dc895e-c366-4a3e-b212-a84a2d07a329.eot');
+    src: url('1475968/38dc895e-c366-4a3e-b212-a84a2d07a329.eot?#iefix') format('embedded-opentype'),
+    url('1475968/8a711a0d-3f17-4bfe-887b-6229858332b3.woff2') format('woff2'),
+    url('1475968/05a79c4b-9e9d-46e4-9d4b-610be05371c4.woff') format('woff'),
+    url('1475968/4e00405b-a96d-4972-bdff-2d55e1066c45.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
