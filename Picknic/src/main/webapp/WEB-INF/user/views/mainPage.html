@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=clevice-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Picknic</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/mainPage.css">
+
+</head>
+
+<body class="wrap">
+	
+	<div>
+		<!-- 헤더 영역 -->
+	</div>
+
+	<!-- 배경영역 -->
+	<div id="container" >
+
+
+		<div class="w">
+			Welecome to the Pcknic!
+		</div>
+		
+		<!-- 버튼 -->
+		<div class="btn_container" >
+
+
+			<ul>
+				<li class="btn_left">
+					<button onclick="toggleImg()"> 이전 </button>
+				</li>
+				<li class="btn_right">
+					<button onclick="toggleImg()"> 다음 </button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="slider_title">
+			<a class="slider_link" href="https://www.naver.com"><p class="slider_title">Sample title. Here is exhibition for everyone</p></a>
+		</div>
+
+	</div>
+
+
+
+
+	<div>
+		<!-- 푸터 영역 -->
+	</div>
+
+	<script src="../js/jquery-3.6.0.js">
+		$(document).ready(function () {
+			$(':button').click(function () {
+				$('.slider_link').attr('href', "https://www.daum.net");
+			});
+		});
+	</script>
+
+
+	<script type="text/javascript" >
+
+		var num =1;
+		var slider_link = document.getElementsByClassName("slider_link");
+		var slider_title = document.getElementsByClassName("slider_title");
+		var bgImage = document.getElementById("container");
+		var t = document.getElementsByClassName("btn_img");
+
+		function toggleImg() {
+
+
+
+			if (num==1) {
+
+				//이미지 변경
+				bgImage.style.background =
+						"url('../resources/mainSlider2.png')" +
+						"no-repeat";
+				bgImage.style.backgroundSize = "cover";
+				bgImage.style.position="absolute";
+				bgImage.style.backgroundPosition = "center";
+				num=2;
+
+			} else if(num==2){
+
+				bgImage.style.background =
+						"url('../resources/mainSlider1.png')" +
+						"no-repeat";
+				bgImage.style.backgroundSize = "cover";
+				bgImage.style.position="absolute";
+				bgImage.style.backgroundPosition = "center";
+				num=1;
+			}
+		}
+
+
+
+
+	</script>
+
+
+</body>
+</html>
