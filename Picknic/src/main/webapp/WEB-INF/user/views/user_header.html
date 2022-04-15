@@ -1,6 +1,8 @@
-<link rel="stylesheet" href="../css/user_header.css"/> 
+<link rel="stylesheet" href="../css/user_header.css"/>
+<script href="../js/common.js" rel="stylesheet"/>
 
 <meta charset="utf-8">
+
 
 <header>
 	<div class="outer_header">
@@ -8,27 +10,20 @@
 		<div class="inner_header">
 		
 		<div class="inner_section1">
+
 		<!-- 로고 부분 -->
 		<div class="logo">
 		<a href="">exhibition</a>
 		</div>
 
 			<!-- 전시회 메뉴 전체 영역 -->
-
+	
 				<ul id="menu_button">
-
-					<!-- 메뉴 탭 첫번째칸 공백 -->
-					<li id="menu_space" class="transparent disable menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-					<a href="http://piknic.kr/ticket/">ticket</a></li>
 					
 					<!-- exhibition info -->
 					<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
 					<li id="menu_exhibition" class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
 					<a href="http://piknic.kr/exhibition-category/current/">exhibition</a></li>
-
-					<!-- hall info -->
-					<!-- 오시는길, 내부시설정보, FAQ  -->
-					<li id="menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://piknic.kr/about-piknic/piknic/">about picknic</a></li>
 
 					<!-- shop -->
 					<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
@@ -37,17 +32,23 @@
 					<!-- 대관(rental) -->
 					<!-- 대관 날짜, 시간, 홀  -->
 					<li id="menu_program" class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99"><a href="http://piknic.kr/program-category/current/">rental</a></li>
+
+					<!-- hall info -->
+					<!-- 오시는길, 내부시설정보, FAQ  -->
+					<li id="menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://piknic.kr/about-piknic/piknic/">about picknic</a></li>
 				</ul>
+
 		</div> <!-- inner_section1-->
 
 		<div class="inner_section2">
+
 		<!-- 사용자 버튼 영역 -->
 		<div class="user_button">
 		<!-- 각 버튼의 링크 -->
-		<a href="#login">LOGIN</a>
-		<a href="#mypage">MYPAGE</a>
-		<a href="#cart">CART</a>
-		</div>
+		<a href="#login" id="login_button">LOGIN</a>
+		<a href="#mypage" id="mypage_button">MYPAGE</a>
+		<a href="#cart" id="cart_button">CART</a>
+		</div> 
 		
 		<!-- 캘린더 영역 -->
 		<div class="calendar" data-link="http://piknic.kr/schedule/">
@@ -57,7 +58,7 @@
 				<span id="calendar-date" class="calendar-date">2022.4.14 THU</span>
 				<!-- 캘린더 메뉴탭 오픈시 상단 '닫기' 버튼 영역 -->
 				<span class="close">CLOSE</span>
-			</div>
+			</div> 
 		</div> <!--calendar-->
 
 			<!-- 캘린더 -->

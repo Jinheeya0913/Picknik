@@ -1,20 +1,19 @@
-
+/*px 말고 %로 설정하기*/
 
 /* 전체 */
 .outer_header{
     display: flex;
 	width: 100%;
-	height: 12%;
-	background-color: aquamarine;
+    height: 90px;
+	background-color: white;
 	position: sticky;
-	
 }
 
 /* 이너블록 */
 .inner_header {
-	background-color: #faf8f0;
+    background-color: #faf8f0;
 	width:80%;
-	height:100%; 
+    height: 100px;
 	position: relative;
 	margin-left: 10%;
     border-bottom: 2px solid black ;
@@ -25,7 +24,7 @@
 
 .inner_section1{
     background-color: #faf8f0;
-	width:100%;
+	width:61%;
 	height:50%; 
 	position: relative;
     display: flex;
@@ -34,47 +33,98 @@
 
 .inner_section2{
     background-color: #faf8f0;
-	width:100%;
-	height:50%; 
+	width:40%;
+	height:38%;
+    margin-bottom:61px;
 	position: relative;
     display: flex;
-    align-items: center;
+
+    /*align-items: center;*/
 }
 
 .logo{
-    font-size:30pt;
-    margin-top:25px;
+    font-size:2.5rem;
+    margin-top:50px;
 }
 
 a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 #menu_button{
-    background-color: darkgreen;
-    position: relative;
-    width:1000px;
-    height: 20px;
-    margin-left:1%;
-    margin-top:90px;
+    /*background-color: darkgreen;*/
+    position: absolute;
+    width: 160%;
+    height: 40%;
+    margin-top: 12%;
+
 }
 
-.user_button{
-    background-color: yellow;
-    display: inline-block;
-    margin-left: 1%;
-    width:30%;
-    margin-bottom:60px;
-    
+#menu_exhibition{
+    margin-left:17%;
+    margin-right:15%;
 }
+
+#menu_shop{
+    margin-right:15%;
+}
+
+#menu_rental{
+
+
+}
+
+#menu_about{
+    background-color: white;
+    margin-right:6%;
+    float:right;
+}
+
+/*1rem : 16px */
+.user_button{
+    /*background-color: yellow;*/
+    display: inline-block;
+    width: 45%;
+    height: 90%;
+    margin-bottom:20px;
+    text-align: center;
+    font-size:10px;
+    line-height: 55px;
+}
+
+#login_button  {
+    margin-right:45px;
+}
+
+#mypage_button {
+    margin-right:45px;
+}
+
+#cart_button{
+    margin-right:10px;
+}
+
 
 .calendar{
-    background-color: orange;
+    background-color: darkorange;
     display: inline-block;
-    margin-left: 1%;
-    width:30%;
-    margin-bottom:60px;
+    margin-left: 5%;
+    width:50%;
+    height: 100%;
+    margin-bottom:45px;
+    text-align: center;
+    color:white;
+    font-size:12px;
+}
+
+#calendar-date{
+    line-height: 40px;
+}
+
+/*캘린더 열림 아이콘*/
+.close{
+    margin-left:20%;
 }
 
 
@@ -82,5 +132,14 @@ li{
     list-style-type:none;
     float:left;
     margin-left: 30px;
-   
+}
+
+@media screen and (max-width: 1450px) {
+   #menu_button {display:none;}
+   .user_button {display:none;}
+   .calendar {display:none;}
+}
+
+@media screen and (min-width: 768px ){
+
 }
