@@ -6,37 +6,18 @@ body{
     overflow-x: hidden;;
 }
 
+.container {
+    display: flex;
+}
+
+
+
 .side-menu{
 
     display: none;
     left: 20px;
 }
 
-
-
-/* content */
-#container{
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    box-sizing:border-box;
-    padding-bottom:50px;
-}
-
-
-/* layout */
-.container{
-
-    display: flex;
-    flex-direction: row;
-    width:auto;
-    margin:0 12px;
-
-}
-
-.container > div{
-    margin: 10px 10px 20px 10px;
-}
 
 .box_img{
     width: 100%;
@@ -51,7 +32,7 @@ body{
 }
 
 .list_link > li > p {
-    margin-bottom: 5px;
+
 }
 
 .side_list_1 {
@@ -84,7 +65,7 @@ body{
 
     .p_title {
 
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bolder;
     }
 
@@ -133,15 +114,20 @@ body{
         display: none;
     }
 
+    .info_head{
+        border-bottom: 1px solid black;
+    }
+
+
     .head_title{
         width: 100%;
-        border-bottom: 3px solid black;
-
     }
+
 
     .head_limit{
         display: inline-block;
     }
+
 
     .head_book{
         display: inline-block;;
@@ -159,14 +145,21 @@ body{
         padding-top:70px;
     }
     /* layout */
+
     .container{
         width:auto;
         margin:0 18px;
     }
 
-    .journalSection > div{
-        display: inline-block;
+
+    .exhibit_info{
+        flex-direction: row;
     }
+    .head_title{
+        border: none;
+    }
+
+
 
 }
 
