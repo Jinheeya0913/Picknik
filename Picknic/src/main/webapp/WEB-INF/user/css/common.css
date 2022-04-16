@@ -1,11 +1,10 @@
 *{
     margin: 0; padding: 0;
-    text-decoration: none;
 }
 
 .container{
-    max-width: 1450px;
-    max-height: 1450px;
+    width:auto;
+    margin:0 12px;
 }
 
 .wrap{
@@ -22,3 +21,35 @@ a{
     text-decoration: none;
     color: black;
 }
+
+@media screen and (min-width:768px) {
+
+    body{
+        padding-top:70px;
+    }
+    /* layout */
+    .container{
+        width:auto;
+        margin:0 18px;
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+    body {
+        padding-top: 100px;
+    }
+
+    /* layout */
+    .container {
+        width: 1120px;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+
