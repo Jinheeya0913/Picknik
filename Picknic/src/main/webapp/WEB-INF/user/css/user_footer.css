@@ -14,7 +14,8 @@
 .outer_footer{
 	width: 100%;
 	height: 12%;
-	background-color: #faf8f0;
+	background-color: darkorange;
+	/*background-color: #faf8f0;*/
 	position:relative;
 	
 }
@@ -22,6 +23,7 @@
 
 /* 이너블록 */
 .inner_footer {
+	background-color: skyblue;
 	/*background-color: #faf8f0;*/
 	width:80%;
 	height:100%; 
@@ -51,7 +53,7 @@
 }
 
 /* 텍스트 */
-#followus{
+#follow_us{
 	/*background-color:  #faf8f0;*/
 	font-size:10pt;
 	position:absolute;
