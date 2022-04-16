@@ -150,6 +150,7 @@ div img{
     box-sizing:border-box;
     padding-bottom:50px;
 }
+
 .page-template-template-home #container{
     min-height: calc(100vh - 106px);
     min-height: calc(var(--vh, 1vh) * 100 - 106px);
@@ -402,7 +403,7 @@ div img{
 
 @media screen and (min-width:1200px){
     body{
-        padding-top:100px;
+        padding-top: 90px;
     }
 
     /* layout */

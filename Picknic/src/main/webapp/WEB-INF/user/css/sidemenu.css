@@ -3,6 +3,10 @@
     margin-right: 20px;
 }
 
+.side-menu a:hover{
+    color: #4ccfff;
+}
+
 #side_title{
     font-size: 2rem;
     font-weight: bolder;
@@ -20,4 +24,11 @@
 
 #side_lise_2{
     font-weight: bold;
+}
+
+
+@media screen and (max-width:768px) {
+    .side-menu{
+        display: none;
+    }
 }
