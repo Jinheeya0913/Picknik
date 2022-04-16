@@ -1,0 +1,23 @@
+.side-menu{
+    display: block;
+    margin-right: 20px;
+}
+
+#side_title{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.list_link{
+    margin-bottom: 10px;
+}
+
+.side_list_p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#side_lise_2{
+    font-weight: bold;
+}

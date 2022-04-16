@@ -68,17 +68,19 @@
     margin: 10px 10px 10px 5px;
 }
 
-    .description > p{
+.description > p{
         text-indent: 20px;
         max-height: 300px;
         font-size: 1.5rem;
         line-height: 2rem;
         overflow: scroll;
         overflow-x: hidden;
-    }
+}
 
-
-
+#list_link_1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 @media screen and (max-width: 768px) {
 
