@@ -1,5 +1,37 @@
+
+body{
+    background-color:#faf8f0;
+    font-family: 'Univers', 'Noto Sans KR', sans-serif;
+    padding-top:54px;
+    overflow-x: hidden;;
+}
+
+.side-menu{
+
+    display: none;
+    left: 20px;
+}
+
+
+
+/* content */
+#container{
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    box-sizing:border-box;
+    padding-bottom:50px;
+}
+
+
+/* layout */
 .container{
+
     display: flex;
+    flex-direction: row;
+    width:auto;
+    margin:0 12px;
+
 }
 
 .container > div{
@@ -82,7 +114,7 @@
     font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+
 
     .exhibit_info{
         flex-direction: column;
@@ -121,5 +153,31 @@
         color: deepskyblue;
     }
 
+@media screen and (min-width: 768px){
 
+    body{
+        padding-top:70px;
+    }
+    /* layout */
+    .container{
+        width:auto;
+        margin:0 18px;
+    }
+
+    .journalSection > div{
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    body{
+        padding-top: 90px;
+    }
+
+    /* layout */
+    .container{
+        width:1120px;
+        margin:0 auto;
+    }
 }

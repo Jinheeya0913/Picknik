@@ -1,6 +1,4 @@
-@charset "UTF-8";
-
- footer{
+footer{
 	display: flex;
 	font: inherit;
 	margin: 0;
