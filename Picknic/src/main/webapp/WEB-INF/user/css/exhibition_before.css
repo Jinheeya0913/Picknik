@@ -1,36 +1,10 @@
-html{
-    scroll-behavior: smooth;
-}
-body{
-    background-color:#faf8f0;
-    font-family: 'Univers', 'Noto Sans KR', sans-serif;
-    padding-top:54px;
-    overflow-x: hidden;;
-}
-
-.side-menu{
-
-    display: none;
-    left: 20px;
-}
 
 body.home{
     background-color:#000;
     color:white;
     overflow-y:hidden;
 }
-input{
-    font-family: 'Univers', 'Noto Sans KR', sans-serif;
-}
 
-/* layout */
-.container{
-    display: flex;
-    flex-direction: row;
-    width:auto;
-    margin:0 12px;
-
-}
 .row{
     margin-left:-8px;
     margin-right:-8px;
@@ -40,6 +14,8 @@ input{
     clear:both;
     display:block;
 }
+
+
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5,
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5,
@@ -75,19 +51,13 @@ input{
     width:50%;
 }
 
-.desktop{
-    display:none;
-}
-
-.padding-right{
-    padding-right:0;
-    box-sizing:border-box;
-}
-
 div img{
     width:100%;
     height:auto;
 }
+
+
+/* 아이템 리스트 */
 
 .item-list .item{
     margin-bottom:20px;
@@ -100,6 +70,7 @@ div img{
 .item-title{
     padding-top:10px;
 }
+
 .item-title>.text-inner{
     font-size:16px;
     line-height:24px;
@@ -118,43 +89,6 @@ div img{
     margin-top:8px;
 }
 
-.flex{
-    display:flex;
-    justify-content:space-between;
-}
-.float-box:after{
-    content:"";
-    display:block;
-    clear:both;
-}
-.float-left{
-    float:left !important;
-}
-.float-right{
-    float:right !important;
-}
-.top-margin{
-    margin-top:12px;
-}
-.top-margin.relative{
-    position: relative;
-}
-
-
-
-/* content */
-#container{
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    box-sizing:border-box;
-    padding-bottom:50px;
-}
-
-.page-template-template-home #container{
-    min-height: calc(100vh - 106px);
-    min-height: calc(var(--vh, 1vh) * 100 - 106px);
-}
 #container h2>.text-inner{
     font-size:20px;
     line-height:30px;
@@ -183,18 +117,6 @@ div img{
     margin-bottom:-3px;
 }
 
-/* side menu */
-.secondary-menu {
-    display:none;
-}
-.secondary-menu a{
-    position: relative;
-}
-.secondary-menu .side-menu{
-    position:fixed;
-}
-
-
 
 @media (min-width: 782px){
     .wp-block-column:not(:first-child) {
@@ -205,45 +127,12 @@ div img{
     }
 }
 
-/* default */
-#container.piknic-default h2{
-    margin-top:15px;
-}
-#container.piknic-default h2>.text-inner{
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: -3px;
-    margin-bottom: -3px;
-}
-#container.piknic-default .content{
-    margin-top:30px;
-}
-#container.piknic-default .content>.text-inner{
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: -3px;
-    margin-bottom: -3px;
-}
-#container.piknic-default .content p:first-child {
-    margin-top: 0;
-}
-#container.piknic-default .content p {
-    margin-top: 22px;
-}
 
 /*
     tablet size
 */
 
 @media screen and (min-width:768px){
-    body{
-        padding-top:70px;
-    }
-    /* layout */
-    .container{
-        width:auto;
-        margin:0 18px;
-    }
 
     .col-sm-1{
         width:20%;
@@ -265,134 +154,6 @@ div img{
         width:50%;
     }
 
-    .padding-right{
-        padding-right:15px;
-    }
-
-    .item-list .item{
-        margin-bottom:30px;
-    }
-    .top-margin{
-        margin-top:15px;
-    }
-
-    span.mobile{
-        display:none;
-    }
-    span.tablet{
-        display:inline-block;
-    }
-
-    /* slider */
-    .text-slider .slide>.text-inner{
-        font-size: 16px;
-        line-height: 24px;
-        margin-top:-4px;
-        margin-bottom:-4px;
-    }
-    .image-slider {
-        padding-top:50%;
-    }
-
-    /* header */
-    header.main-header>.inner{
-        padding-top:16px;
-        padding-bottom:13px;
-    }
-    header.main-header h1{
-        width:120px;
-    }
-    header.main-header h1 svg{
-        width:120px;
-        height:41px;
-    }
-
-    /* mobile menu */
-    .btn-mobile{
-        top:16px;
-    }
-    .btn-mobile, .btn-mobile svg{
-        width:34px;
-        height:34px;
-    }
-    .btn-mobile#btn-mobile-menu-close{
-        right:18px;
-    }
-    nav.mobile-menu{
-        width: 310px;
-    }
-    #mobile-menu-shop{
-        color:#000;
-        font-size:10px;
-        height:52px;
-        box-sizing:border-box;
-    }
-    .menu-main-mobile-menu-container>.inner{
-        padding: 18px 18px 40px 18px;
-    }
-    .menu-main-mobile-menu-container li>a{
-        font-size:16px;
-        line-height:1em;
-        color:#000;
-    }
-    #menu-main-mobile-menu>li:first-child{
-        border-top:none;
-    }
-    #menu-main-mobile-menu ul{
-        padding-left:20px;
-    }
-    #menu-main-mobile-menu ul>li{
-        margin-top:8px;
-    }
-
-    header.main-header .side-menu{
-        display:block;
-    }
-
-
-    /* content */
-    .page-template-template-home #container{
-        min-height: calc(100vh - 140px);
-        min-height: calc(var(--vh, 1vh) * 100 - 140px);
-    }
-    #container h2>.text-inner{
-        font-size:24px;
-        line-height:36px;
-        margin-top:-6px;
-        margin-bottom:-6px;
-    }
-    .article-single h2 {
-        padding-bottom:0;
-        border-bottom:none;
-        margin-bottom: 35px;
-    }
-    .article-single .description{
-        display:block;
-        margin-bottom:0;
-    }
-    .article-single .description.hide{
-        display:block;
-    }
-    .article-single .content>.text-inner{
-        font-size:16px;
-        line-height:24px;
-        margin-top:-4px;
-        margin-bottom:-4px;
-    }
-
-    .piknic-about .text-slider-container{
-        border-top: none;
-        padding-top: 0;
-        margin-top: 0;
-    }
-    .piknic-article .content{
-        border-top:none;
-        padding-top:0;
-    }
-
-    .item-title{
-        padding-top:15px;
-    }
 
 }
 
@@ -402,15 +163,8 @@ div img{
 */
 
 @media screen and (min-width:1200px){
-    body{
-        padding-top: 90px;
-    }
 
-    /* layout */
-    .container{
-        width:1120px;
-        margin:0 auto;
-    }
+
     .page-template-template-home #container{
         min-height: calc(100vh - 200px);
     }
@@ -446,10 +200,6 @@ div img{
     .col-lg-3>.row>.col-lg-2{
         width:66.6%;
     }
-
-
-
-
 
 
 }
