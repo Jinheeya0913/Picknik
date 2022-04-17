@@ -20,6 +20,59 @@
   </properties>
 
   <dependencies>
+<!-- Spring -->
+
+    <!--spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.19</version>
+    </dependency>
+
+    <!--spring-jdbc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.3.19</version>
+    </dependency>
+
+    <!--spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.3.19</version>
+    </dependency>
+
+    <!--spring-webmvc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.3.19</version>
+    </dependency>
+
+
+
+    <!-- commons-logging -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+
+<!-- javax   -->
+
+
+    <!--jstl -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+
+
+    <!--  Other  -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
