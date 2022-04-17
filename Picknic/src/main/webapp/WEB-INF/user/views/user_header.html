@@ -5,84 +5,16 @@
 <link rel="stylesheet" id="common-css" href="../css/common.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="../css/user_header.css"/>
 
-<script href="../js/user_header.js" rel="stylesheet"></script>
+<script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--<script href="../js/user_header.js" rel="stylesheet"></script>-->
 
 <header>
 
-<!-- PC header -->
-	<div class="outer_header">
-
-		<div class="inner_header">
-		
-		<div class="inner_section1">
-
-		<!-- 로고 -->
-		<div class="logo">
-		<a href="" class="a_tag">exhibition</a>
-		</div>
-
-
-			<!-- 전시회 메뉴 전체 영역 -->
-	
-				<ul id="menu_button">
-					
-					<!-- exhibition info -->
-					<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
-					<li id="menu_exhibition" class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
-					<a href="http://piknic.kr/exhibition-category/current/" class="a_tag">exhibition</a></li>
-
-					<!-- shop -->
-					<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
-					<li id="menu_shop" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2063"><a href="http://piknic.kr/product-category/shop/" class="a_tag">shop</a></li>
-					
-					<!-- 대관(rental) -->
-					<!-- 대관 날짜, 시간, 홀  -->
-					<li id="menu_program" class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99"><a href="http://piknic.kr/program-category/current/" class="a_tag">rental</a></li>
-
-					<!-- hall info -->
-					<!-- 오시는길, 내부시설정보, FAQ  -->
-					<li id="menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://piknic.kr/about-piknic/piknic/" class="a_tag">about picknic</a></li>
-				</ul>
-
-		</div> <!-- inner_section1-->
-
-		<div class="inner_section2">
-
-		<!-- 사용자 버튼 영역 -->
-		<div class="user_button">
-		<!-- 각 버튼의 링크 -->
-		<a href="#login" id="login_button" class="a_tag">LOGIN</a>
-		<a href="#mypage" id="mypage_button" class="a_tag">MYPAGE</a>
-		<a href="#cart" id="cart_button" class="a_tag">CART</a>
-		</div> 
-		
-		<!-- 캘린더 영역 -->
-		<div class="calendar" data-link="http://piknic.kr/schedule/">
-			<!-- 캘린더상단 영역 -->
-			<div class="handle">
-				<!-- 캘린더 날짜표시 영역 -->
-				<span id="calendar-date" class="calendar-date">2022.4.14 THU</span>
-				<!-- 캘린더 메뉴탭 오픈시 상단 '닫기' 버튼 영역 -->
-				<span class="close">CLOSE</span>
-			</div> 
-		</div> <!--calendar-->
-
-			<!-- 캘린더 -->
-			<!-- /캘린더 -->
-
-		</div> <!--inner section2-->
-		</div> <!--inner-->
-	</div> <!--outer-->
-
-
-
-	<!-- Mobile header -->
-
-
+	<!--------------------------------------- mobile header ----------------------------------------->
 	<div class="m_outer_header">
-
 		<div class="m_inner_header">
-
 			<div class="m_inner_section1">
 
 				<!-- 로고 -->
@@ -90,49 +22,149 @@
 					<a href="" class="m_a_tag">exhibition</a>
 				</div>
 
+				<!-- 토글 버튼 -->
+				<button type="button" class="m_toggle_button"><i class="fa-solid fa-bars"></i></button>
 
-				<!-- 전시회 메뉴 전체 영역 -->
+				<!-- ----------토글 메뉴 시작 ------------- -->
+				<div class="m_toggle_menu">
 
-				<ul id="m_menu_button">
+					<!--top 영역-->
+					<div class="m_top_login_section">
+						<div class="m_top_login">
+							<a href="#login" id="m_login_button" class="m_a_tag">LOGIN</a>
+							<a href="#mypage" id="m_mypage_button" class="m_a_tag">MYPAGE</a>
+							<a href="#cart" id="m_cart_button" class="m_a_tag">CART</a>
+						</div>
+						<button class="x"><i class="fa-solid fa-xmark"></i></button>
+					</div>
 
-					<!-- exhibition info -->
-					<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
-					<li id="m_menu_exhibition" class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
-						<a href="http://piknic.kr/exhibition-category/current/" class="m_a_tag">exhibition</a></li>
+					<!--middle 영역-->
+					<div class="m_middle_list_section">
 
-					<!-- shop -->
-					<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
-					<li id="m_menu_shop" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2063"><a href="http://piknic.kr/product-category/shop/" class="m_a_tag">shop</a></li>
+						<!-- exhibition -->
+						<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
+						<div id="m_menu_exhibition"
+							 class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
+							<a href="http://piknic.kr/exhibition-category/current/" class="m_a_tag">exhibition</a></div>
 
-					<!-- 대관(rental) -->
-					<!-- 대관 날짜, 시간, 홀  -->
-					<li id="m_menu_rental" class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99"><a href="http://piknic.kr/program-category/current/" class="m_a_tag">rental</a></li>
+						<!-- shop -->
+						<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
+						<div id="m_menu_shop"
+							 class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2063">
+							<a href="http://piknic.kr/product-category/shop/" class="m_a_tag">shop</a></div>
 
-					<!-- hall info -->
-					<!-- 오시는길, 내부시설정보, FAQ  -->
-					<li id="m_menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://piknic.kr/about-piknic/piknic/" class="m_a_tag">about picknic</a></li>
-				</ul>
+						<!-- rental -->
+						<!-- 대관 날짜, 시간, 홀  -->
+						<div id="m_menu_rental"
+							 class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99">
+							<a href="http://piknic.kr/program-category/current/" class="m_a_tag">rental</a></div>
 
-			</div> <!-- inner_section1-->
+						<!-- about picknic : hall info -->
+						<!-- 오시는길, 내부시설정보, FAQ  -->
+						<div id="m_menu_about"
+							 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130">
+							<a href="http://piknic.kr/about-piknic/piknic/" class="m_a_tag">about picknic</a></div>
+					</div> <!--m_middle_list_section-->
 
-			<div class="m_inner_section2">
 
-				<!-- 사용자 버튼 영역 -->
-				<div class="m_user_button">
-					<!-- 각 버튼의 링크 -->
-					<a href="#login" id="m_login_button" class="m_a_tag">LOGIN</a>
-					<a href="#mypage" id="m_mypage_button" class="m_a_tag">MYPAGE</a>
-					<a href="#cart" id="m_cart_button" class="m_a_tag">CART</a>
-				</div>
+					<!-- middle2  -->
+					<div class="m_middle_icon_section">
+						<!-- 텍스트 -->
+						<div id="m_follow_us">FOLLOW US</div>
+						<!-- sns아이콘 전체-->
+						<div class="m_sns_link">
+							<!-- 인스타그램 링크 아이콘 -->
+							<a class="m_btn-icon1" href=https://instagram.com/picknic.kr target="_blank">
+								<i class="fa-brands fa-instagram"></i></a>
+							<!-- 페이스북 링크 아이콘 -->
+							<a class="m_btn-icon2" href=https://facebook.com/picknic.kr target="_blank">
+								<i class="fa-brands fa-facebook-square"></i></a>
+						</div> <!-- sns_link -->
+					</div> <!--m_middle_icon_section -->
 
-				<!-- 캘린더 영역 -->
-				<div class="m_calendar" data-link="http://piknic.kr/schedule/">
+
+					<!-- bottom  -->
+					<div class="m_bottom_calendar_section">
+					</div> <!--m_calendar_section-->
 					<!-- 캘린더상단 영역 -->
 					<div class="m_handle">
 						<!-- 캘린더 날짜표시 영역 -->
-						<span id="m_calendar-date" class="m_calendar-date">2022.4.14 THU</span>
+						<span id="m_calendar-date" class="m_calendar-date">2022.4.17 SAT</span>
+						<span class="open"><i class="fa-solid fa-angle-up"></i></span>
 						<!-- 캘린더 메뉴탭 오픈시 상단 '닫기' 버튼 영역 -->
-						<span class="m_close">CLOSE</span>
+						<!-- <span class="m_close">CLOSE</span>-->
+						<!-- 이벤트 걸어줘야함. -->
+					</div> <!--m_handle -->
+
+					<!-- 캘린더 넣을 구간-->
+					<!-- /캘린더 넣을 구간 -->
+
+
+				</div> <!----------- 토글 메뉴 끝 ----------->
+
+			</div> <!--m_inner_section1-->
+		</div> <!--m_inner_header-->
+	</div> <!--m_outer_header-->
+
+	<!---------------------------------------------- PC header ------------------------------------------->
+	<div class="outer_header">
+		<div class="inner_header">
+			<div class="inner_section1">
+
+				<!-- 로고 -->
+				<div class="logo">
+					<a href="" class="a_tag">exhibition</a>
+				</div>
+
+
+				<!-- 전시회 메뉴 전체 영역 -->
+
+				<ul id="menu_button">
+
+					<!-- exhibition info -->
+					<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
+					<li id="menu_exhibition"
+						class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
+						<a href="http://piknic.kr/exhibition-category/current/" class="a_tag">exhibition</a></li>
+
+					<!-- shop -->
+					<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
+					<li id="menu_shop"
+						class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2063"><a
+							href="http://piknic.kr/product-category/shop/" class="a_tag">shop</a></li>
+
+					<!-- 대관(rental) -->
+					<!-- 대관 날짜, 시간, 홀  -->
+					<li id="menu_program"
+						class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99"><a
+							href="http://piknic.kr/program-category/current/" class="a_tag">rental</a></li>
+
+					<!-- hall info -->
+					<!-- 오시는길, 내부시설정보, FAQ  -->
+					<li id="menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130">
+						<a href="http://piknic.kr/about-piknic/piknic/" class="a_tag">about picknic</a></li>
+				</ul>
+
+			</div> <!-- inner_section1 -->
+
+			<div class="inner_section2">
+
+				<!-- 사용자 버튼 영역 -->
+				<div class="user_button">
+					<!-- 각 버튼의 링크 -->
+					<a href="#login" id="login_button" class="a_tag">LOGIN</a>
+					<a href="#mypage" id="mypage_button" class="a_tag">MYPAGE</a>
+					<a href="#cart" id="cart_button" class="a_tag">CART</a>
+				</div>
+
+				<!-- 캘린더 영역 -->
+				<div class="calendar" data-link="http://piknic.kr/schedule/">
+					<!-- 캘린더상단 영역 -->
+					<div class="handle">
+						<!-- 캘린더 날짜표시 영역 -->
+						<span id="calendar-date" class="calendar-date">2022.4.14 THU</span>
+						<!-- 캘린더 메뉴탭 오픈시 상단 '닫기' 버튼 영역 -->
+						<span class="close">CLOSE</span>
 					</div>
 				</div> <!--calendar-->
 
@@ -143,27 +175,17 @@
 		</div> <!--inner-->
 	</div> <!--outer-->
 
-
-
-
-
-
-
-
-
-
 </header>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$(".user_button>a").click(function() {   <!--클래스 이름 : 토글메뉴부터 하위까지 전부 -->
-			$('.hide').slideLeft();
+
+<script type="text/javascript">
+	$(function () {
+		$(".m_toggle_button").click(function () {
+			$(".m_toggle_menu").slideToggle();
 		});
-		$("button.x").click(function() {
-			$('.hide').slideRight();
-		})
+
+		$(".x").click(function () {
+			$(".m_toggle_menu").slideToggle('hide');
+		});
 	});
 </script>
-
-
