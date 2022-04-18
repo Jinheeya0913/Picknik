@@ -1,21 +1,34 @@
 /*px 말고 %로 설정하기*/
-/*모바일(기본)*/
+
+/*모바일(기본) 1200이하 */
+@media screen and (max-width:1200px) {
+
+.a_tag {display: none;}
+.user_button {display: none;}
+#calendar_date {display: none;}
+.close {display: none;}
+.handle {display: none;}
+.calendar-date {display: none;}
 
 /****************** mobile css *******************/
 
 /* 메인 화면 전체 영역 */
 .m_outer_header {
     display: flex;
-
+    width: 96%;
+    margin-left: 2%;
+    height: 9px;
+    background-color: #faf8f0;
     position: sticky;
 }
 
 /* 메인 화면 내부 영역 */
 .m_inner_header {
+    background-color: #faf8f0;
     width: 100%;
-    top: 0;
     height: 1px;
-    position: sticky;
+    position: relative;
+    border-bottom: 1.5px solid black;
     display: flex;
     align-items: center;
 }
@@ -23,6 +36,8 @@
 .m_inner_section1 {
     background-color: #faf8f0;
     width: 100%;
+    height: 1px;
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -114,6 +129,7 @@
 
 /* 토글 middle */
 .m_middle_list_section {
+    border-top: 1px solid black;
     width: 90%;
     height: 0;
 }
@@ -189,14 +205,14 @@
 
 /*캘린더 텍스트*/
 #m_calendar-date {
-    margin-left: 8px;
+    margin-left: 10px;
 }
 
 /*캘린더 'open'*/
 .open {
     float: right;
     margin-top: 10px;
-    margin-right: 15%;
+    margin-right: 12%;
 }
 
 /*캘린더 'close'*/
@@ -210,10 +226,10 @@ li {
     float: left;
     margin-left: 1px;
 }
-
+}
 
 /*pc(1200이상 일때 화면 셋팅)*/
-@media screen and(min-width:1200px) {
+@media screen and (min-width:1200px) {
     .m_outer_header {display:none;}  /*모바일 화면 숨기기*/
 
     /******************** pc css ********************/
@@ -277,12 +293,13 @@ li {
     }
 
     #menu_exhibition{
-        margin-left:17%;
+
+        margin-left:25%;
         margin-right:15%;
     }
 
     #menu_shop{
-        margin-right:15%;
+        margin-right:18%;
     }
 
     #menu_about{
@@ -342,4 +359,7 @@ li {
         margin-left: 1px;
     }
 }
+
+
+
 
