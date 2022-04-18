@@ -1,0 +1,46 @@
+.side-menu{
+    display: none;
+    margin-right: 20px;
+}
+
+.side-menu a:hover{
+    color: #4ccfff;
+}
+
+.list_link > li > p{
+    margin-bottom: 15px;
+}
+
+
+
+#side_title{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.list_link{
+    margin-bottom: 10px;
+}
+
+.side_list{
+    width: 100%;
+}
+
+.side_list_p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#side_lise_2{
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 1200px){
+
+    .side-menu{
+        display: inline-block;
+    }
+
+}
