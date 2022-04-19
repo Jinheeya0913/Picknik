@@ -12,13 +12,6 @@
 }
 
 
-
-#side_title{
-    font-size: 2rem;
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
 .list_link{
     margin-bottom: 10px;
 }
@@ -27,14 +20,28 @@
     width: 100%;
 }
 
-.side_list_p{
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+#side_list_1 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+
 }
 
-#side_lise_2{
-    font-weight: bold;
-}
+/*#side_list_1{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_2{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_3{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_4{*/
+/*    font-weight: bold;*/
+/*}*/
 
 
 @media screen and (min-width: 1200px){
