@@ -28,15 +28,68 @@
     </script>
 
 
+<!--<script>-->
+<!--    async function onInputInvalid() {-->
+<!--        let message = "입력된 비밀번호가 다릅니다.";-->
+
+<!--        const password = password-->
+<!--        const password_re = password_re-->
+<!--        if (password !== password_re.val()) {-->
+
+<!--            set(checkmessage,message)-->
+
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
 <script>
-    async function onInputInvalid() {
-        let message = "입력된 비밀번호가 다릅니다.";
 
-        const password = password
-        const password_re = password_re
-        if (password !== password_re.val()) {
+    function joinFormCheck() {
 
-            set(checkmessage,message)
+        if ($("#user_id").val() != "") {
+            if (!CheckPass($("#user_id").val(), 3, 8, 16)) {
+                alert("아이디로 이용 할 알맞은 이메일 주소를 입력해 주세요.");
+                $("#user_id").focus();
+                return false;
+            }
+
+            if ($("#user_pw").val() != "") {
+                if (!CheckPass($("#user_pw").val(), 3, 8, 16)) {
+                    alert("비밀번호는 영문, 숫자, 특수기호 포함 8~16자 이내로 입력해 주세요.");
+                    $("#user_pw").focus();
+                    return false;
+                }
+
+                if ($("#user_pw").val() != $("#user_pw_re").val()) {
+                    alert("비밀번호 확인이 일치하지 않습니다.");
+                    $("#user_pw_re").focus();
+                    return false;
+                }
+            }
+
+            if ($("#user_name").val() != "") {
+                alert("이름을 입력하세요.");
+                $("#user_name").focus();
+                return false;
+            }
+
+            if ($("#user_tel").val() == "" || $("#user_tel1").val() == "" || $("#user_tel2").val() == "") {
+                alert("휴대폰번호를 입력해 주세요.");
+                $("#user_tel1").focus();
+                return false;
+            }
+
+            if ($("#user_addr").val() == "" || $("#user_addr1").val() == "") {
+                alert("주소찾기를 통해 주소를 입력해 주세요.");
+                $("#user_addr1").focus();
+                return false;
+            }
+
+            if ($("#user_addr2").val() == "") {
+                alert("나머지 주소를 입력해 주세요.");
+                $("#user_addr2").focus();
+                return false;
+            }
 
         }
     }
@@ -72,7 +125,7 @@
 
             <!--  아이디 입력  -->
             <input type="text" class="input_id" name="username"
-                   id="user_id" autocomplete="username" value="">
+                   id="user_id" autocomplete="username" value="" onclick="joinFormCheck()">
 
         </p>
 
@@ -89,7 +142,7 @@
             <span class="pw_input">
                 <input class="input_pw" placeholder="비밀번호 입력"
                        type="password" name="password" id="user_pw"
-                       autocomplete="current-password" oninput="onInputInvalid('password')">
+                       autocomplete="current-password" onclick="joinFormCheck()">
                 <span class="show-password-input"></span>
             </span>
         </p>
@@ -102,7 +155,7 @@
                 <input class="input_pw_re" placeholder="비밀번호 확인"
                        type="password" name="password_re" id="user_pw_re"
                        autocomplete="current-password"
-                       oninput="onInputInvalid('passwordCheck')">
+                       onclick="joinFormCheck()">
             </span>
         </p>
 
@@ -178,7 +231,7 @@
 
 
         <!-- 가입하기 버튼 -->
-        <button type="submit" class="join_submit_btn" name="join_btn" value="가입하기">가입하기
+        <button type="submit" class="join_submit_btn" name="join_btn" value="가입하기">가 입 하 기
         </button>
 
         </div>
