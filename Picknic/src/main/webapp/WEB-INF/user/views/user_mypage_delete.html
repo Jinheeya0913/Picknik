@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- css -->
+    <link rel='stylesheet' id='reset-css' href='../css/reset.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='common-css' href='../css/common.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/user_mypage_delete.css">
+
+    <!-- script -->
+    <script>
+        function info_delete(){
+            alert("탈퇴가 완료되었습니다.");
+        }
+    </script>
+
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 전체 영역-->
+<div id="container" class="container">
+    <!-- 이너 영역 1-->
+    <div class="inner_section1">
+        <!-- 주문내역 전체 영역 -->
+        <div class="order_list">
+
+            <button type="submit" class="submit_delete"  onclick="info_delete()"
+                    name="info_delete" value="회원탈퇴">회원 탈퇴</button>
+
+            <div class="section_line"></div>
+
+        </div> <!-- order_list -->
+    </div> <!--inner_section1 -->
+</div> <!-- container -->
+
+
+</body>
+</html>
