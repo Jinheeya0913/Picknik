@@ -1,17 +1,3 @@
-
-body{
-    background-color:#faf8f0;
-    font-family: 'Univers', 'Noto Sans KR', sans-serif;
-    padding-top:54px;
-    overflow-x: hidden;;
-}
-
-.container {
-    display: flex;
-}
-
-
-
 .box_img{
     width: 100%;
     background-size: cover;
@@ -126,15 +112,7 @@ body{
 
 @media screen and (min-width: 768px){
 
-    body{
-        padding-top:70px;
-    }
-    /* layout */
 
-    .container{
-        width:auto;
-        margin:0 18px;
-    }
 
     .exhibit_info{
         flex-direction: row;
@@ -153,15 +131,6 @@ body{
 }
 
 @media screen and (min-width: 1200px){
-    body{
-        padding-top: 90px;
-    }
 
-
-    /* layout */
-    .container{
-        width:1120px;
-        margin:0 auto;
-    }
 
 }

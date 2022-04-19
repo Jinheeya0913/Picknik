@@ -14,6 +14,17 @@
     <!--Script-->
       <script src="../js/jquery-3.6.0.js"></script>
       <script src="../js/sidemenu.js"></script>
+      <script type="text/javascript">
+        $(function () {
+          $(".m_toggle_button").click(function () {
+            $(".m_toggle_menu").slideToggle();
+          });
+
+          $(".x").click(function () {
+            $(".m_toggle_menu").slideToggle('hide');
+          });
+        });
+      </script>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=clevice-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,8 +34,10 @@
 
 <body>
 
-  <div class="header">
+  <div id="header">
   </div>
+
+
 
 
 

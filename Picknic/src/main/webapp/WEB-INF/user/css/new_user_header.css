@@ -103,9 +103,6 @@ header {
     font-size: 2rem;
 }
 
-
-
-
 .m_middle_icon_section{
     display: flex;
     justify-content: space-between;
@@ -142,10 +139,6 @@ header {
     left: 0;
 }
 
-
-
-
-
 @media screen and (min-width: 1200px) {
 
 /* 모바일 비활성화 */
@@ -164,12 +157,9 @@ header {
         height: 12%;
     }
 
-
     .m_logo >a {
         font-size: 1.5rem;
     }
-
-
 
     .pc_outer_header{
         display: flex;
@@ -197,7 +187,6 @@ header {
         padding: 0 80px 0 80px ;
     }
 
-
     #calendar-date{
         font-size: 1.0rem;
     }
@@ -205,9 +194,6 @@ header {
     .open >i {
         font-size: 1.0rem;
     }
-
-
-
 
     .pc_middle_list_section{
         display: flex;
@@ -219,13 +205,10 @@ header {
         margin: 0 70px 0 70px;
     }
 
-
-
     .pc_middle_list_section > div >a {
         font-size: 1.2rem;
         font-weight: bold;
     }
-
 
 }
 

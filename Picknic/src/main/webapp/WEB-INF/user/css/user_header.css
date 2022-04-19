@@ -14,47 +14,45 @@
 
 /* 메인 화면 전체 영역 */
 .m_outer_header {
-    display: flex;
-    width: 96%;
-    margin-left: 2%;
-    height: 9px;
-    background-color: #faf8f0;
     position: sticky;
+    /* 먹음 */
+
+    z-index: 10;
+    display: flex;
+    width: 100%;
+
 }
 
 /* 메인 화면 내부 영역 */
 .m_inner_header {
-    background-color: #faf8f0;
-    width: 100%;
-    height: 1px;
-    position: relative;
-    border-bottom: 1.5px solid black;
     display: flex;
+    position: relative;
+    width: 100%;
     align-items: center;
+
 }
 
 .m_inner_section1 {
-    background-color: #faf8f0;
-    width: 100%;
-    height: 1px;
-    position: relative;
     display: flex;
+    position: relative;
+
+    width: 100%;
     align-items: center;
 }
 
 .m_inner_section2 {
-    background-color: #faf8f0;
-    width: 100%;
-    height: 1px;
-    margin-bottom: 61px;
-    position: relative;
     display: flex;
+    position: relative;
+
+    width: 100%;
+
+
 }
 
 .m_logo {
     font-size: 2rem;
     margin-top: -50px;
-    margin-left: 1px;
+
 }
 
 .m_a_tag {
@@ -88,27 +86,34 @@
 /* 토글 메뉴*/
 .m_toggle_menu {
     display: flex;
+    position: fixed;
+
     flex-direction: column;
     background-color: linen;
+
     width: 50%;
     height: 100%;
-    position: fixed;
-    top: -7px;
+
+    top: 0px;
     left: 50%;
     right: 0;
-    overflow: auto;
     padding: 15px 5px 5px 5px;
+
     transition: left .3s ease-in-out;
 }
 
 /* 토글 top  */
-.m_top_login_section {
-    margin-bottom: 25px;
-}
 
+
+.m_top_login_section {
+    top: 0;
+    border-bottom: 1px solid black;
+}
 /*로그인 영역 */
+
+
 .m_top_login {
-    width: 70%;
+    width: 100%;
     height: 20px;
 }
 
@@ -122,16 +127,18 @@
 }
 
 .x {
-    margin-left: 81%;
-    margin-top: -20px;
+    position: absolute;
+    top: 10px;
+    right: 5%;
     font-size: 1.3rem;
 }
 
 /* 토글 middle */
 .m_middle_list_section {
-    border-top: 1px solid black;
-    width: 90%;
-    height: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+
 }
 
 #m_menu_exhibition {
@@ -152,10 +159,9 @@
 
 /* 토글 middle2 */
 .m_middle_icon_section {
-    border-top: 1px solid black;
-    width: 91%;
-    height: 11%;
-    margin-top: 150px;
+    width: 100%;
+
+
 }
 
 /* 텍스트 */
@@ -197,7 +203,6 @@
     background-color: lightsteelblue;
     height: 52px;
     line-height: 40px;
-    color: white;
     bottom: 0;
     right: 0;
     left: 0;
@@ -211,7 +216,7 @@
 /*캘린더 'open'*/
 .open {
     float: right;
-    margin-top: 10px;
+
     margin-right: 12%;
 }
 
@@ -224,50 +229,42 @@
 li {
     list-style-type: none;
     float: left;
-    margin-left: 1px;
 }
 }
 
 /*pc(1200이상 일때 화면 셋팅)*/
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1201px) {
     .m_outer_header {display:none;}  /*모바일 화면 숨기기*/
 
     /******************** pc css ********************/
     /* 전체 */
     .outer_header{
         display: flex;
-        width: 100%;
-        height: 90px;
-        background-color: white;
         position: sticky;
+        width: 100%;
+        border-bottom: 2px double black;
     }
 
     /* 이너블록 */
     .inner_header {
-        background-color: #faf8f0;
-        width:80%;
-        height: 100px;
         position: relative;
-        margin-left: 10%;
-        border-bottom: 1.5px solid black;
+        width:100%;
         display: flex;
         align-items: center;
     }
 
+
     .inner_section1{
-        background-color: #faf8f0;
-        width:61%;
-        height:50%;
+        width: 100%;
+        height:100%;
         position: relative;
         display: flex;
         align-items: center;
     }
 
     .inner_section2{
-        background-color: #faf8f0;
         width:40%;
         height:38%;
-        margin-bottom:61px;
         position: relative;
         display: flex;
         /*align-items: center;*/
@@ -284,62 +281,40 @@ li {
     }
 
     #menu_button{
-        /*background-color: darkgreen;*/
-        position: absolute;
-        width: 160%;
-        height: 40%;
-        margin-top: 12%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto 20px 0 20px;
+        bottom: 0;
+
+        font-weight: bold;
 
     }
 
-    #menu_exhibition{
-
-        margin-left:25%;
-        margin-right:15%;
-    }
-
-    #menu_shop{
-        margin-right:18%;
-    }
-
-    #menu_about{
-        background-color: white;
-        margin-right:6%;
-        float:right;
-    }
 
     /*1rem : 16px */
     .user_button{
         display: inline-block;
-        width: 45%;
-        height: 90%;
-        margin-bottom:20px;
-        text-align: center;
+        width: 100%;
         font-size:10px;
-        line-height: 55px;
+        line-height: 45px;
     }
 
-    #login_button  {
-        margin-right:45px;
-    }
+    .btn_span {
+        float: right;
 
-    #mypage_button {
-        margin-right:45px;
-    }
+        margin-left: 10%;
+        margin-right: 10%;
 
-    #cart_button{
-        margin-right:10px;
+
     }
 
     .calendar{
         background-color: darkorange;
         display: inline-block;
-        margin-left: 5%;
         width:50%;
         height: 100%;
-        margin-bottom:45px;
         text-align: center;
-        color:white;
         font-size:12px;
     }
 
@@ -352,12 +327,16 @@ li {
         margin-left:20%;
     }
 
-    /* mobile pc common css */
-    li {
-        list-style-type: none;
-        float: left;
-        margin-left: 1px;
+    .btAndCal{
+        display: flex;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
     }
+
+    /* mobile pc common css */
+
 }
 
 
