@@ -1,20 +1,16 @@
 @charset "UTF-8";
 
  footer{
-	display: flex;
 	font: inherit;
 	margin: 0;
  	padding: 0;
  	border: 0;
- 	background-color: white;
-} 
+}
 
 
 /* 전체 */
 .outer_footer{
 	width: 100%;
-	height: 93px;
-	background-color: #faf8f0;
 	position:relative;
 	
 }
@@ -22,9 +18,7 @@
 
 /* 이너블록 */
 .inner_footer {
-	background-color: #faf8f0;
 	width:80%;
-	height: 0px;
 	position: relative;
 	margin-left: 10%;	
 
@@ -41,32 +35,30 @@
 } */
 
 .right_section{
-	/*background-color:  #faf8f0;*/
+	position: relative;
+	float:right;
 	width:20%;
 	height: 30%;
-	float:right;
-	position: relative;
-	margin-top:63.5px;
+
 
 }
 
 /* 텍스트 */
 #follow_us{
-	/*background-color:  #faf8f0;*/
-	font-size:10pt;
-	position:absolute;
-	margin-top:1%;
 	display: flex;
+	position:absolute;
+	font-size:10pt;
+	margin-top:1%;
+
 }
 
 /* 아이콘 div */
 .sns_link{
-
-	/*background-color: #faf8f0;*/
+	display: flex;
 	position:absolute;
 	margin-left:57%;
 	width:43%;
-	display: flex;
+
 
 }
 
@@ -93,7 +85,7 @@ address {
 	font-size:10pt;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
 	footer {display:none;}
 
 }

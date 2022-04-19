@@ -1,140 +1,344 @@
 /*px 말고 %로 설정하기*/
 
-/* 전체 */
-.outer_header{
+/*모바일(기본) 1200이하 */
+@media screen and (max-width:1200px) {
+
+.a_tag {display: none;}
+.user_button {display: none;}
+#calendar_date {display: none;}
+.close {display: none;}
+.handle {display: none;}
+.calendar-date {display: none;}
+
+/****************** mobile css *******************/
+
+/* 메인 화면 전체 영역 */
+.m_outer_header {
+    position: sticky;
+    /* 먹음 */
+
+    z-index: 10;
     display: flex;
-	width: 100%;
-    height: 90px;
-	background-color: white;
-	position: sticky;
+    width: 100%;
+
 }
 
-/* 이너블록 */
-.inner_header {
-    background-color: #faf8f0;
-	width:80%;
-    height: 100px;
-	position: relative;
-	margin-left: 10%;
-    border-bottom: 1.5px solid black;
+/* 메인 화면 내부 영역 */
+.m_inner_header {
     display: flex;
+    position: relative;
+    width: 100%;
     align-items: center;
 
 }
 
-.inner_section1{
-    background-color: #faf8f0;
-	width:61%;
-	height:50%; 
-	position: relative;
+.m_inner_section1 {
     display: flex;
+    position: relative;
+
+    width: 100%;
     align-items: center;
 }
 
-.inner_section2{
-    background-color: #faf8f0;
-	width:40%;
-	height:38%;
-    margin-bottom:61px;
-	position: relative;
+.m_inner_section2 {
     display: flex;
-    /*align-items: center;*/
+    position: relative;
+
+    width: 100%;
+
+
 }
 
-.logo{
-    font-size:2.5rem;
-    margin-top:50px;
+.m_logo {
+    font-size: 2rem;
+    margin-top: -50px;
+
 }
 
-.a_tag {
+.m_a_tag {
     text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/*스크롤바*/
+.m_toggle_menu::-webkit-scrollbar {
+    display: none;
+}
+
+/*토글 버튼*/
+.m_toggle_button {
+    margin-left: 65%;
+    margin-top: -45px;
+}
+
+/*토글 아이콘*/
+.m_toggle_button i {
+    font-size: 1rem;
+}
+
+.menubar.on {
+    right: 0;
+}
+
+
+/******토글 화면 영역*******/
+/* 토글 메뉴*/
+.m_toggle_menu {
+    display: flex;
+    position: fixed;
+
+    flex-direction: column;
+    background-color: linen;
+
+    width: 50%;
+    height: 100%;
+
+    top: 0px;
+    left: 50%;
+    right: 0;
+    padding: 15px 5px 5px 5px;
+
+    transition: left .3s ease-in-out;
+}
+
+/* 토글 top  */
+
+
+.m_top_login_section {
+    top: 0;
+    border-bottom: 1px solid black;
+}
+/*로그인 영역 */
+
+
+.m_top_login {
+    width: 100%;
+    height: 20px;
+}
+
+#m_login_button, #m_mypage_button {
+    font-size: 8pt;
+    margin-right: 9%;
+}
+
+#m_cart_button {
+    font-size: 8pt;
+}
+
+.x {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    font-size: 1.3rem;
+}
+
+/* 토글 middle */
+.m_middle_list_section {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+
+}
+
+#m_menu_exhibition {
+    margin-top: 15px;
+}
+
+#m_menu_shop {
+    margin-top: 15px;
+}
+
+#m_menu_rental {
+    margin-top: 15px;
+}
+
+#m_menu_about {
+    margin-top: 15px;
+}
+
+/* 토글 middle2 */
+.m_middle_icon_section {
+    width: 100%;
+
+
+}
+
+/* 텍스트 */
+#m_follow_us {
+    font-size: 7pt;
+    margin-top: 18px;
+    display: flex;
+}
+
+/* 아이콘 */
+.m_sns_link {
+    margin-top: -16px;
+    margin-left: 75%;
+    width: 50%;
+}
+
+/* 아이콘 버튼1 */
+.m_btn-icon1 {
     color: black;
 }
 
-#menu_button{
-    /*background-color: darkgreen;*/
+/* 아이콘 버튼2 */
+.m_btn-icon2 {
+    color: black;
+    margin-left: 13%;
+}
+
+/*  토글 bottom */
+.m_calendar_section {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    float: bottom;
+}
+
+/*캘린더 div*/
+.m_handle {
     position: absolute;
-    width: 160%;
-    height: 40%;
-    margin-top: 12%;
-
-}
-
-#menu_exhibition{
-    margin-left:17%;
-    margin-right:15%;
-}
-
-#menu_shop{
-    margin-right:15%;
-}
-
-
-
-#menu_about{
-    background-color: white;
-    margin-right:6%;
-    float:right;
-}
-
-/*1rem : 16px */
-.user_button{
-    display: inline-block;
-    width: 45%;
-    height: 90%;
-    margin-bottom:20px;
-    text-align: center;
-    font-size:10px;
-    line-height: 55px;
-}
-
-#login_button  {
-    margin-right:45px;
-}
-
-#mypage_button {
-    margin-right:45px;
-}
-
-#cart_button{
-    margin-right:10px;
-}
-
-
-.calendar{
-    background-color: darkorange;
-    display: inline-block;
-    margin-left: 5%;
-    width:50%;
-    height: 100%;
-    margin-bottom:45px;
-    text-align: center;
-    color:white;
-    font-size:12px;
-}
-
-#calendar-date{
+    background-color: lightsteelblue;
+    height: 52px;
     line-height: 40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
-/*캘린더 열림 아이콘*/
-.close{
-    margin-left:20%;
+/*캘린더 텍스트*/
+#m_calendar-date {
+    margin-left: 10px;
+}
+
+/*캘린더 'open'*/
+.open {
+    float: right;
+
+    margin-right: 12%;
+}
+
+/*캘린더 'close'*/
+.m_close {
+    /*margin-left: 20%;*/
+}
+
+/* mobile pc common css */
+li {
+    list-style-type: none;
+    float: left;
+}
+}
+
+/*pc(1200이상 일때 화면 셋팅)*/
+@media screen and (min-width:1201px) {
+    .m_outer_header {display:none;}  /*모바일 화면 숨기기*/
+
+    /******************** pc css ********************/
+    /* 전체 */
+    .outer_header{
+        display: flex;
+        position: sticky;
+        width: 100%;
+        border-bottom: 2px double black;
+    }
+
+    /* 이너블록 */
+    .inner_header {
+        position: relative;
+        width:100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .inner_section1{
+        width: 100%;
+        height:100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .inner_section2{
+        width:40%;
+        height:38%;
+        position: relative;
+        display: flex;
+        /*align-items: center;*/
+    }
+
+    .logo{
+        font-size:2.5rem;
+        margin-top:50px;
+    }
+
+    .a_tag {
+        text-decoration: none;
+        color: black;
+    }
+
+    #menu_button{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto 20px 0 20px;
+        bottom: 0;
+
+        font-weight: bold;
+
+    }
+
+
+    /*1rem : 16px */
+    .user_button{
+        display: inline-block;
+        width: 100%;
+        font-size:10px;
+        line-height: 45px;
+    }
+
+    .btn_span {
+        float: right;
+
+        margin-left: 10%;
+        margin-right: 10%;
+
+
+    }
+
+    .calendar{
+        background-color: darkorange;
+        display: inline-block;
+        width:50%;
+        height: 100%;
+        text-align: center;
+        font-size:12px;
+    }
+
+    #calendar-date{
+        line-height: 40px;
+    }
+
+    /*캘린더 열림 아이콘*/
+    .close{
+        margin-left:20%;
+    }
+
+    .btAndCal{
+        display: flex;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+    }
+
+    /* mobile pc common css */
+
 }
 
 
-li{
-    list-style-type:none;
-    float:left;
-    margin-left: 30px;
-}
 
-@media screen and (max-width: 1450px) {
-   #menu_button {display:none;}
-   .user_button {display:none;}
-   .calendar {display:none;}
-}
 
-@media screen and (min-width: 768px ){
-
-}

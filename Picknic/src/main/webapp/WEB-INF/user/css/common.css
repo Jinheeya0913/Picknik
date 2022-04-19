@@ -4,12 +4,18 @@
 
 html{
     scroll-behavior: smooth;
+    max-width: 1375px;
 }
 
 /* layout */
 .container{
     display: flex;
     flex-direction: row;
+    width:auto;
+    margin:0 12px;
+}
+
+.header_container{
     width:auto;
     margin:0 12px;
 }
@@ -78,7 +84,7 @@ a{
 
     /* layout */
     .container {
-        width: 1120px;
+        width: 100%;
         margin: 0 auto;
     }
 

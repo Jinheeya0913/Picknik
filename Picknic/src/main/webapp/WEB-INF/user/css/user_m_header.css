@@ -108,6 +108,7 @@
     .m_middle_list_section {
         border-top: 1px solid black;
         width:90%;
+        margin: 10px 10px 10px 10px;
     }
 
     #m_menu_exhibition {
