@@ -27,25 +27,26 @@
         }
     </script>
 
-
     <script>
         async function onInputInvalid() {
             let message = "입력된 비밀번호가 다릅니다.";
 
             const password = password
             const password_re = password_re
+
             if (password !== password_re.val()) {
 
                 set(checkmessage,message)
-
             }
         }
+
     </script>
 
 
     <title>my info</title>
 </head>
 <body>
+
 
 
 <!-- 전체 영역-->
@@ -89,7 +90,7 @@
                 <span class="pw_input">
                 <input class="input_pw" placeholder="비밀번호 입력"
                        type="password" name="password" id="user_pw"
-                       autocomplete="current-password" oninput="onInputInvalid('password')">
+                       autocomplete="current-password" onclick="onInputInvalid()">
                 <span class="show-password-input"></span>
             </span>
             </p>
@@ -102,7 +103,7 @@
                 <input class="input_pw_re" placeholder="비밀번호 확인"
                        type="password" name="password_re" id="user_pw_re"
                        autocomplete="current-password"
-                       oninput="onInputInvalid('passwordCheck')">
+                       onclick="onInputInvalid()">
             </span>
             </p>
 
