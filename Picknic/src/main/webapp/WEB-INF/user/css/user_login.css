@@ -1,0 +1,227 @@
+@media screen and (max-width:1200px){
+    h2 {display: none;}
+}
+
+/*로그인 전체 박스*/
+#login-box{
+    margin: auto;
+
+    max-width: 440px;
+   
+}
+
+/*에러메세지*/
+.error{
+    margin-bottom: 15px ;
+}
+
+#login_title{
+
+    text-align: center;
+}
+
+.loginbox_sction{
+
+}
+
+/*!*바디태그 전체 글씨체*!*/
+/*body{*/
+/*    font-family: 'Univers', 'Noto Sans KR', sans-serif;*/
+/*}*/
+
+/*!*메인 전체 영역*!*/
+/*.col-lg-5{*/
+/*    box-sizing: border-box;*/
+/*    padding-left: 8px;*/
+/*    padding-right: 8px;*/
+/*}*/
+
+/*!*로그인 박스 전체*!*/
+/*#login-box {*/
+/*    max-width:440px;*/
+/*    margin:auto;*/
+/*}*/
+/*#login-box .woocommerce-Input {*/
+/*    background: transparent;*/
+/*    box-shadow: none;*/
+/*    outline: none;*/
+/*    border: none;*/
+/*    border-bottom: solid 1px #000;*/
+/*    border-radius: 0;*/
+/*    -webkit-appearance: none;*/
+/*    height: 30px;*/
+/*    line-height: 30px;*/
+/*    font-size: 14px;*/
+/*}*/
+/*.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {*/
+/*    border: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    text-align: left;*/
+/*    border-radius: 0;*/
+/*}*/
+
+
+/*!*로그인박스 전체 h2태그 '로그인' '회원가입'*!*/
+/*#login-box h2 {*/
+/*    font-size: 17px;*/
+/*    font-style: initial;*/
+/*    font-weight: inherit;*/
+/*}*/
+
+/*#login-box .woocommerce-form-login, #login-box .woocommerce-form-register {*/
+/*    margin-top: 25px;*/
+/*}*/
+
+/*!*아이디 또는 이메일주소 부분 영역*!*/
+/*.woocommerce #login-box form .form-row {*/
+/*    padding:0;*/
+/*    margin-bottom:15px;*/
+/*}*/
+/*.woocommerce form .form-row {*/
+/*    margin-top: 20px !important;*/
+/*}*/
+
+/*!*아이디 또는 이메일 주소 label*!*/
+/*.woocommerce #login-box form .form-row label {*/
+/*    line-height: 1;*/
+/*}*/
+/*.woocommerce form .form-row label, .woocommerce-page form .form-row label {*/
+/*     display: block;*/
+/*}*/
+/*.woocommerce #login-box form .form-row label {*/
+/*    line-height: 1;*/
+/*}*/
+
+/*!*   *   *!*/
+/*.required {*/
+/*     display: none;*/
+/*}*/
+/*.woocommerce form .form-row .required {*/
+/*    visibility: visible;*/
+/*}*/
+/*.woocommerce-form-row--wide span {*/
+/*    font-size: 10px;*/
+/*}*/
+
+/*!* label *!*/
+/*.form-row > label {*/
+/*    vertical-align: baseline;*/
+/*    font-size:13px;*/
+/*    margin-top:11px;*/
+/*}*/
+
+/*.form-row > label > #woocommerce-login-nonce {*/
+/*    margin-top: 12px;*/
+/*}*/
+
+/*!*input박스 *!*/
+/*.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {*/
+/*    background: transparent;*/
+/*    border: none;*/
+/*    width:100%;*/
+/*    border-bottom: solid 1px #000;*/
+/*    !*height: 35px;*!*/
+/*    !*line-height: 35px;*!*/
+/*}*/
+/*.woocommerce form .password-input input[type=password], .woocommerce-page form .password-input input[type=password] {*/
+/*    padding-right: 2.5rem;*/
+/*}*/
+
+/*.woocommerce form .form-row::after, .woocommerce-page form .form-row::after {*/
+/*    clear: both;*/
+/*}*/
+
+/*input {*/
+/*    margin-bottom: 1px;*/
+
+/*}*/
+
+
+/*!* p, h2 *!*/
+/*p, h2{*/
+/*    font: inherit;*/
+/*}*/
+
+
+/*!*'비밀번호를 잊어버리셨나요?*!*/
+/*.woocommerce form .form-row::after, .woocommerce form .form-row::before, .woocommerce-page form .form-row::after, .woocommerce-page form .form-row::before {*/
+/*    content: ' ';*/
+/*    display: table;*/
+/*}*/
+/*.woocommerce form .form-row::after, .woocommerce-page form .form-row::after {*/
+/*    clear: both;*/
+/*}*/
+/*.woocommerce form .form-row::after, .woocommerce form .form-row::before, .woocommerce-page form .form-row::after, .woocommerce-page form .form-row::before {*/
+/*    content: ' ';*/
+/*    display: table;*/
+/*}*/
+/*#login-box .woocommerce-form-login .woocommerce-form-login__rememberme {*/
+/*    display: block;*/
+/*}*/
+
+/*#login-box .woocommerce-LostPassword {*/
+/*    margin-top:30px;*/
+/*    text-decoration:underline;*/
+/*    padding-bottom: 5px;*/
+/*    font-size: 10px;*/
+/*}*/
+
+/*!* 버튼 *!*/
+/*  button {*/
+/*    float:right;*/
+/*    appearance: auto;*/
+/*    writing-mode: horizontal-tb !important;*/
+/*    width:58px;*/
+/*    height:25px;*/
+/*    font-size: 10px;*/
+/*    font-family: 'Univers', 'Noto Sans KR', sans-serif;*/
+/*    text-rendering: auto;*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*    letter-spacing: normal;*/
+/*    word-spacing: normal;*/
+/*    line-height: normal;*/
+/*    text-transform: none;*/
+/*    text-indent: 0px;*/
+/*    text-shadow: none;*/
+/*    display: inline-block;*/
+/*    text-align: center;*/
+/*    align-items: flex-start;*/
+/*    cursor: pointer;*/
+/*    box-sizing: border-box;*/
+/*    margin:0em;*/
+/*    padding: 1px 8px;*/
+/*    border-width: 1px;*/
+/*    border-style: outset;*/
+/*    border-image: initial;*/
+/*}*/
+
+/*.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {*/
+/*    !* background-color: #4ccfff; *!*/
+/*    color: #fff;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*!* 체크박스 모양*!*/
+/*!*#rememberme {*!*/
+/*!*    border:2px solid #000000;*!*/
+/*!*    border-radius: 30%;*!*/
+/*!*}*!*/
+
+/*p{*/
+/*    height:15px;*/
+/*    margin-top:24px;*/
+/*}*/
+
+/*!*아이디 또는 이메일 주소 input 마진*!*/
+/*!*이건.. input 라인이 왜 다 적용이 안되고 아이디란만 적용이 되냐... *!*/
+/*.form-row > input {*/
+/*    margin-top: -10px;*/
+/*}*/
+
+/*!*비밀번호 input 라인 줄이고 싶다...... *!*/
+/*.password-input {*/
+/*    !*margin-top: -50px;*!*/
+/*}*/
+
