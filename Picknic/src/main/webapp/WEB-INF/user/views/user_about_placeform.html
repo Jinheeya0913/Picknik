@@ -1,31 +1,27 @@
 <meta charset="UTF-8">
 
-<link rel='stylesheet' id='reset-css' href='../css/reset.css' type='text/css' media='all'/>
-<link rel='stylesheet' id='common-css' href='../css/common.css' type='text/css' media='all'/>
-<link rel="stylesheet" type="text/css" href="../css/user_about_placeform.css"/>
+<script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
 
-<script src="../js/jquery-3.6.0.js"></script>
 
 <div class="place_container">
-
     <div class="img_slide">
-        <img id="back" class="btn_direction" src="" width="100">
+
+        <i id="back" class="fa-solid fa-angle-left"></i>
         <ul>
             <li class="list_img" id="list_img_01">
-                <img class="img_source" id="place_cafe" src="../resources/cafe.png" width="1000" height="600">
+                <img class="img_source" id="place_cafe" src="../resources/article_4.png">
             </li>
             <li class="list_img" id="list_img_02">
-                <img class="img_source" id="place_bar" src="../resources/bar.png" width="1000" height="600">
+                <img class="img_source" id="place_bar" src="../resources/article_2.png" >
             </li>
             <li class="list_img" id="list_img_03">
-                <img class="img_source" id="place_shop" src="../resources/bar.png" width="1000" height="600">
+                <img class="img_source" id="place_shop" src="../resources/article_3.png" >
             </li>
             <li class="list_img" id="list_img_04">
-                <img class="img_source" id="place_special" src="../resources/bar.png" width="1000" height="600">
+                <img class="img_source" id="place_special" src="../resources/article_4.png">
             </li>
         </ul>
-        <img id="next" class="btn_direction" src="" width="100">
-
+        <i id="next" class="fa-solid fa-angle-right"></i>
 
 
     </div>
@@ -87,7 +83,7 @@
         </div>
 
         <div class="place_descript">
-            <div class="place_number"> 1/4 </div>
+            <div class="place_number"> 2/4 </div>
             <span> 벨기에 아티스트 마르셀 브로타에스의 1074년 작품,
          Un Jardin d'Hiven 와 디자이너 드리스 반 노튼의 패션쇼 공간 테마를
         응용해, 다이닝룸과 윈터 가든을 이 공간에 재현하고자 했습니다.
@@ -115,17 +111,15 @@
         </div>
 
         <div class="place_descript">
-            <div class="place_number"> 1/4 </div>
-            <span> 벨기에 아티스트 마르셀 브로타에스의 1074년 작품,
-         Un Jardin d'Hiven 와 디자이너 드리스 반 노튼의 패션쇼 공간 테마를
-        응용해, 다이닝룸과 윈터 가든을 이 공간에 재현하고자 했습니다.
-        카페 피크닉에서는 밀도 높은 커피를 중심으로 계절에 따라 새로운 메뉴들을
-        선보이며, 가볍게 즐길 수 있는 하우스 와인 또한 제공하고 있습니다
+            <div class="place_number"> 3/4 </div>
+            <span> 알ㄴㅁ알ㄴㅇㅁㄹㄴㅁㅇㄹㅁㄴㅇㄹㅇㄴㅁㄹㄴㅇㅁㄹ
+                ㄴㅇㅁㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅁㅇㄹㅇㄴㅁㄹㅇㅁㄴㄹㄴㅁㅇㄹ
+                ㄴㅇㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㅁㄹㅁㄴㅇㄹ
+                ㅁㄴㅇㄹㅇㅁㄴㄹㄴㅇㅁㄹ
             </span>
         </div>
 
     </div>
-
 
     <div class="place_info" id="info_04">
         <div class="info_box">
@@ -149,7 +143,7 @@
         </div>
 
         <div class="place_descript">
-            <div class="place_number"> 1/4 </div>
+            <div class="place_number"> 4/4 </div>
             <span> 벨기에 아티스트 마르셀 브로타에스의 1074년 작품,
          Un Jardin d'Hiven 와 디자이너 드리스 반 노튼의 패션쇼 공간 테마를
         응용해, 다이닝룸과 윈터 가든을 이 공간에 재현하고자 했습니다.
@@ -163,68 +157,3 @@
 
 
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        var imgs;
-        var img_count;
-        var img_position=1;
-        var id_number=1;
-        var container = $("info_0"+id_number);
-
-        imgs = $(".img_slide ul");
-        img_count = imgs.children().length;
-
-
-
-    //    버튼을 클릭했을 때 함수 발생
-
-        $('#back').click(function () {
-            back();
-        });
-
-        $('#next').click(function () {
-            next();
-        });
-
-        function back() {
-
-            if (1 < img_position) {
-                imgs.animate({
-                    left:'+=1000px'
-                });
-                container.style.display("none");
-                id_number--;
-                container.style.display("flex")
-
-                img_position--;
-            }
-        }
-
-        function next(){
-
-
-            if (img_count > img_position) {
-                imgs.animate({
-                    left:'-=1000px'
-                });
-                container.style.display("none");
-                id_number++;
-                container.style.display("flex")
-
-
-                img_position++;
-            }
-
-            switch (slide_number) {
-
-                case 1/4:
-
-
-            }
-
-
-
-        }
-    });
-</script>

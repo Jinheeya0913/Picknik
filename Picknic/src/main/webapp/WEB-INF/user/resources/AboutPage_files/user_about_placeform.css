@@ -1,0 +1,171 @@
+
+.place_container {
+    display: flex;
+
+    /*absolutely*/
+
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    /*max-width: 1375px;*/
+
+    /*-----*/
+    border: 1px solid black;
+
+}
+
+
+/* 전체 info 비활성화 */
+#info_02, #info_03,#info_04 {
+    display: none;
+}
+
+.place_info {
+    display: flex;
+    width:100%;
+    height: 30%;
+    flex-direction: row;
+}
+
+.place_info>div {
+    padding: 10px 10px;
+}
+
+/* 전체 이미지 비활성화*/
+
+
+
+/*이미지 슬라이드*/
+
+.img_slide {
+    /*display: inline-block;*/
+
+    /*width: 100%;*/
+    /*!*height: 60%;*!*/
+    /*max-width: 1000px;*/
+    /*max-height: 1500px;*/
+    /*overflow: hidden;*/
+
+    /*!*position: relative;*!*/
+    /*margin: 10px auto;*/
+}
+
+.img_slide > ul {
+    width: 5000px;
+    height: 100%;
+    /*top: 0;*/
+    /*left: 0;*/
+    /*font-size: 0;*/
+}
+
+.list_img {
+    display: inline-block;
+    max-width: 1000px;
+
+}
+
+.img_source {
+
+    max-width: 1000px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#back {
+    /*position: absolute;*/
+    /*position: relative;*/
+    /*top: 40%;*/
+    /*left: 0;*/
+    /*cursor: pointer;*/
+    /*z-index: 20;*/
+}
+
+#next {
+    /*position: absolute;*/
+    top: 40%;
+    /*left: auto;*/
+    /*right: 0;*/
+    /*cursor: pointer;*/
+    /*z-index: 20;*/
+}
+
+/* 설명 */
+
+
+.info_box {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    border-right: 1px solid black;
+}
+
+.info_box >ul {
+    height: 100%;
+}
+
+
+.place_number {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.place_name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.place_details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.place_number {
+    font-size: 1.5rem;
+}
+
+.place_details>span {
+    font-size: 1.0rem;
+}
+
+.tail_details {
+    text-align: right;
+}
+
+
+.place_descript {
+    width: 50%;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.place_descript > span {
+    font-size: 1.0rem;
+}
+
+
+@media screen and (min-width:768px){
+
+    .place_name {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .place_details>span {
+        font-size: 1.0rem;
+    }
+
+    .place_number {
+        font-size: 1.5rem;
+    }
+    .place_descript > span {
+        font-size: 1.0rem;
+    }
+}
+

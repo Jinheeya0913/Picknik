@@ -1,0 +1,90 @@
+*{
+    margin: 0; padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    max-width: 1375px;
+}
+
+/* layout */
+.container{
+    display: flex;
+    flex-direction: row;
+    width:auto;
+    margin:0 12px;
+}
+
+.header_container{
+    width:auto;
+    margin:0 12px;
+}
+
+.container > div{
+    margin: 10px 10px 20px 10px;
+}
+
+input{
+    font-family: 'Univers', 'Noto Sans KR', sans-serif;
+}
+
+
+body{
+    background-color:#faf8f0;
+    font-family: 'Univers', 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;;
+}
+
+
+
+/* content */
+#container{
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    box-sizing:border-box;
+    padding-bottom:50px;
+}
+
+/* 사이드 메뉴 */
+.side-menu{
+    display: none;
+    left: 20px;
+}
+
+
+ul , li{
+    list-style: none; list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width:768px) {
+
+    /* layout */
+    .container{
+        width:auto;
+        margin:0 18px;
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+
+    /* layout */
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+

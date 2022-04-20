@@ -1,110 +1,93 @@
-/* 전체 info 비활성화 */
-.place_info {
+#info_02, #info_03, #info_04 {
     display: none;
 }
 
-#info_01 {
-    display: flex;
+
+.place_container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+
 }
-
-/* 전체 이미지 비활성화*/
-
-
-/*이미지 슬라이드*/
-
 
 .img_slide {
-    display: flex;
-
-
-    max-width: 1000px;
-    max-height: 600px;
     width: 100%;
     height: 100%;
-
+    max-height: 300px;
     overflow: hidden;
-    position: relative;
-    margin: 0 auto;
 }
 
-.img_slide > ul {
-    width: 5000px;
-    position: absolute;
+
+.img_slide >ul {
     top: 0;
     left: 0;
-    font-size: 0;
+    width: 5000px;
+
+
 }
 
 .list_img {
     display: inline-block;
-    max-width: 1000px;
-    max-height: 600px;
-    width: 100%;
-    max-height: 100%;
+    text-align: center;
 }
+
 
 .img_source {
-
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
 }
+
 
 #back {
     position: absolute;
-    top: 250px;
-    left: 0;
+    top: 130px;
+    left: 5%;
+    font-size: 2.5rem;
+    color: tomato;
     cursor: pointer;
     z-index: 1;
 }
+
+
 
 #next {
     position: absolute;
-    top: 250px;
-    right: 0;
+    top: 130px;
+    right: 5%;
+    font-size: 2.5rem;
+    color: tomato;
     cursor: pointer;
     z-index: 1;
 }
 
+
+
+
+
+
+
 /* 설명 */
-
-
-
 .place_info {
-
-    max-width: 1000px;
-    width: 100%;
-    margin: 30px auto;
+    display: flex;
+    width:100%;
+    height: 30%;
+    flex-direction: row;
 }
+
+.place_info>div {
+    padding: 10px 10px;
+}
+
 
 .info_box {
-    width: 60%;
-}
-
-.place_container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-right: 1px solid black;
+}
+
+.info_box >ul {
     height: 100%;
 }
-
-.place_name {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.place_details {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-}
-
-.place_descript {
-    margin: 10px 20px;
-
-}
-
 
 
 .place_number {
@@ -115,26 +98,58 @@
 
 }
 
+.place_name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
-
-@media screen and (min-width:1200px){
-
-
-
-    .info_box {
-        width: 50%;
-    }
-
-
-
-
-
+.place_details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 
+.place_number {
+    font-size: 1.5rem;
+}
+
+.place_details>span {
+    font-size: 1.0rem;
+}
+
+.tail_details {
+    text-align: right;
+}
 
 
+.place_descript {
+    width: 100%;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.place_descript > span {
+    font-size: 1.0rem;
+}
 
 
+@media screen and (min-width:768px){
 
+    .place_name {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .place_details>span {
+        font-size: 1.0rem;
+    }
+
+    .place_number {
+        font-size: 1.5rem;
+    }
+    .place_descript > span {
+        font-size: 1.0rem;
+    }
+}
 

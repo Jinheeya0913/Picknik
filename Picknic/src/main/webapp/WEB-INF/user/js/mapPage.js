@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $(".mainStage").load('wayToPicknic.html');
+    $(".mainStage").load('user_about_way.html');
 });
