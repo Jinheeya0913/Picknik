@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $(".side-menu").load('sideMenu.html');
+    $(".side-menu").load('user_sideMenu.html');
 });

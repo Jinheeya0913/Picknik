@@ -32,7 +32,6 @@ input{
 body{
     background-color:#faf8f0;
     font-family: 'Univers', 'Noto Sans KR', sans-serif;
-    padding-top:54px;
     overflow-x: hidden;;
 }
 
@@ -65,9 +64,6 @@ a{
 
 @media screen and (min-width:768px) {
 
-    body{
-        padding-top:70px;
-    }
     /* layout */
     .container{
         width:auto;
@@ -78,9 +74,7 @@ a{
 }
 
 @media screen and (min-width:1200px) {
-    body {
-        padding-top: 90px;
-    }
+
 
     /* layout */
     .container {
