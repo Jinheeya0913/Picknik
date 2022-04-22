@@ -6,13 +6,16 @@
 		<div class="m_inner_header">
 			<div class="m_inner_section1">
 
-				<!-- 로고 -->
-				<div class="m_logo">
-					<a href="" class="m_a_tag">Picknic</a>
-				</div>
 
-				<!-- 토글 버튼 -->
-				<button type="button" class="m_toggle_button"><i class="fa-solid fa-bars"></i></button>
+				<div class="logoAndButton">
+				<!-- 로고 -->
+					<div class="m_logo">
+						<a href="" class="m_a_tag">Picknic</a>
+					</div>
+
+					<!-- 토글 버튼 -->
+					<button type="button" class="m_toggle_button"><i class="fa-solid fa-bars"></i></button>
+				</div>
 
 				<!-- ----------토글 메뉴 시작 ------------- -->
 				<div class="m_toggle_menu">
@@ -89,10 +92,7 @@
 
 					<!-- 캘린더 넣을 구간-->
 					<!-- /캘린더 넣을 구간 -->
-
-
 				</div> <!----------- 토글 메뉴 끝 ----------->
-
 			</div> <!--m_inner_section1-->
 		</div> <!--m_inner_header-->
 	</div> <!--m_outer_header-->
@@ -179,8 +179,20 @@
 
 		</div> <!--inner-->
 	</div> <!--outer-->
+	<script type="text/javascript">
+		$(function() {
+			$(".m_toggle_button").click(function () {
+				$(".m_toggle_menu").slideToggle();
+			});
 
+			$(".x").click(function () {
+				$(".m_toggle_menu").slideToggle('hide');
+			});
+		});
+	</script>
 </div>
+
+
 
 
 

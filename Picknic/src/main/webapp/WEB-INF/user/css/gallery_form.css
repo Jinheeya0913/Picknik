@@ -118,6 +118,8 @@ div img{
 }
 
 
+
+
 @media (min-width: 782px){
     .wp-block-column:not(:first-child) {
         margin-left: 0px;
@@ -155,7 +157,12 @@ div img{
     }
 
 
+    .m_inner_section1{
+        height: 80px;
+    }
+
 }
+
 
 
 /*

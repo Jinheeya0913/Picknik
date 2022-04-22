@@ -1,6 +1,7 @@
 .side-menu{
     display: none;
     margin-right: 20px;
+    width: 10%;
 }
 
 .side-menu a:hover{
@@ -37,7 +38,7 @@
 @media screen and (min-width: 1200px){
 
     .side-menu{
-        display: inline-block;
+        display: flex;
     }
 
 }

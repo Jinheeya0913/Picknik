@@ -3,13 +3,28 @@
     background-size: cover;
 }
 
+.m_outer_header {
+    display: block;
+    width: 100%;
+}
+.side-menu {
+    width: 30%;
+}
+
+.m_inner_section1{
+    height: 80px;
+}
+
 /* 사이드 메뉴 재설정 */
 
 #side_list_1 {
     font-weight: bold;
 }
 
+.journalSection {
 
+    position: relative;
+}
 /*Journal 섹션 */
 
 .journal_img{

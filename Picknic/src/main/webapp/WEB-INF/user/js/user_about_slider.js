@@ -23,7 +23,7 @@ $(document).ready(function () {
     function back() {
         if (1 < img_position) {
             imgs.animate({
-                left:'+=1000px'
+                left:'+=1200px'
             });
             $("#info_0"+id_number) .css('display', 'none');
             id_number--;
@@ -36,7 +36,7 @@ $(document).ready(function () {
     function next(){
         if (img_count > img_position) {
             imgs.animate({
-                left:'-=1000px'
+                left:'-=1200px'
             });
             $("#info_0"+id_number) .css('display', 'none');
             id_number++;

@@ -10,7 +10,7 @@
 
     <link rel='stylesheet' id='reset-css' href='../css/reset.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='common-css' href='../css/common.css' type='text/css' media='all'/>
-    <link rel="stylesheet" type="text/css" href="../css/exhibition_now.css">
+    <link rel="stylesheet" type="text/css" href="../css/user_exhibition_now.css">
     <link rel="stylesheet" type="text/css" href="../css/gallery_form.css">
     <link rel="stylesheet" type="text/css" href="../css/sidemenu.css">
 
