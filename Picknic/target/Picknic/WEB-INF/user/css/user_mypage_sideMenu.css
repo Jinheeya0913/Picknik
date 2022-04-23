@@ -1,0 +1,53 @@
+.side-menu{
+    display: none;
+    margin-right: 20px;
+}
+
+.side-menu a:hover{
+    color: #4ccfff;
+}
+
+.list_link > li > p{
+    margin-bottom: 15px;
+}
+
+
+.list_link{
+    margin-bottom: 10px;
+}
+
+.side_list{
+    width: 100%;
+}
+
+#side_list_1 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+/*#side_list_1{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_2{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_3{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*#side_list_4{*/
+/*    font-weight: bold;*/
+/*}*/
+
+
+@media screen and (min-width: 1200px){
+
+    .side-menu{
+        display: inline-block;
+    }
+
+}

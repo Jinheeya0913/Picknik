@@ -45,11 +45,7 @@ body{
     padding-bottom:50px;
 }
 
-/* 사이드 메뉴 */
-.side-menu{
-    display: none;
-    left: 20px;
-}
+
 
 
 ul , li{

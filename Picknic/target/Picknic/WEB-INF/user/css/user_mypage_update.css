@@ -1,0 +1,168 @@
+.container {
+    display: flex;
+    font-family: 'Univers', 'Noto Sans KR', sans-serif
+}
+
+.inner_section1 {
+    display:flex;
+    height: 600px;
+    width:100%;
+}
+
+.join_section {
+    margin:auto;
+    width:50%;
+    height:100%;
+}
+
+#join_title {
+    text-align: center;
+    font-size: 13pt;
+}
+
+.required{
+    display: none;
+}
+
+.id_section {
+    margin-top: 15%;
+    margin-bottom: 8%;
+}
+
+.pw_section > label {
+    margin-bottom: 20%;
+}
+
+.error_check {
+    margin-top:10px;
+    margin-bottom:20px;
+    font-size: 11pt;
+}
+
+.error_next_box {
+    margin-top: 10px;
+    font-size: 9pt;
+}
+
+.name_section {
+    margin-top: 8%
+}
+
+.tel_section {
+    margin-top: 8%;
+}
+
+.addr_section {
+    margin-top: 8%;
+
+}
+
+.addr1_section {
+    margin-top: 8%;
+}
+
+
+.addr2_section {
+    margin-top: 8%;
+}
+
+.post_submit_btn {
+    width: 50px;
+    height: 30px;
+    padding: 4px;
+    background-color: black;
+    color:white;
+}
+
+.id_section > input {
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.pw_input > input {
+    width: 100%;
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.pw_re_input > input {
+    width: 100%;
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.name_section > input {
+    width: 50%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.user_join_tel > input {
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+    text-align: center;
+}
+
+.addr_section > input {
+    width: 83%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.addr1_section > input  {
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.addr2_section > input {
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+
+.btns  {
+    margin-left: 30%;
+}
+
+.update_submit_btn {
+    width: 30%;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 4px;
+
+    background-color: black;
+    color: white;
+}
+
+
+.cancle_submit_btn {
+    width: 30%;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 4px;
+    border: solid 1px #000000;
+
+    background-color: transparent;
+    color: black;
+}

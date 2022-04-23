@@ -4,6 +4,7 @@
 
 html{
     scroll-behavior: smooth;
+
 }
 
 /* layout */
@@ -12,6 +13,10 @@ html{
     flex-direction: row;
     width:auto;
     margin:0 12px;
+}
+
+.header_container{
+    width:auto;
 }
 
 .container > div{
@@ -26,7 +31,6 @@ input{
 body{
     background-color:#faf8f0;
     font-family: 'Univers', 'Noto Sans KR', sans-serif;
-    padding-top:54px;
     overflow-x: hidden;;
 }
 
@@ -41,11 +45,7 @@ body{
     padding-bottom:50px;
 }
 
-/* 사이드 메뉴 */
-.side-menu{
-    display: none;
-    left: 20px;
-}
+
 
 
 ul , li{
@@ -59,9 +59,6 @@ a{
 
 @media screen and (min-width:768px) {
 
-    body{
-        padding-top:70px;
-    }
     /* layout */
     .container{
         width:auto;
@@ -72,13 +69,11 @@ a{
 }
 
 @media screen and (min-width:1200px) {
-    body {
-        padding-top: 90px;
-    }
+
 
     /* layout */
     .container {
-        width: 1120px;
+        width: 100%;
         margin: 0 auto;
     }
 
