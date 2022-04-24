@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/*임시*/
+
+
+/**/
+
 .container {
     display: flex;
 
@@ -29,8 +34,8 @@
     height: 45px;
     padding: 4px;
     font-size: 13pt;
-    margin-left: 80%;
     margin-top: 1%;
+    right:0;
     background-color: black;
     color: white;
 }
@@ -143,6 +148,7 @@
 /* 총계값 영역 */
 tbody > #total_value > td {
     line-height: 50px;
+    max-height: 1%;
     border-bottom: 1px solid black;
 }
 
@@ -241,7 +247,6 @@ body {
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
     background-color: var(--bs-body-bg);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -384,7 +389,7 @@ sup {
     vertical-align: baseline;
 }
 
-sub {
+
 sub {
     bottom: -0.25em;
 }
@@ -2855,10 +2860,7 @@ textarea.form-control-lg {
 .form-floating > .form-control::placeholder, .form-floating > .dataTable-input::placeholder {
     color: transparent;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .dataTable-input:not(:-moz-placeholder-shown) {
-    padding-top: 1.625rem;
-    padding-bottom: 0.625rem;
-}
+
 .form-floating > .form-control:not(:-ms-input-placeholder), .form-floating > .dataTable-input:not(:-ms-input-placeholder) {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
@@ -2874,10 +2876,6 @@ textarea.form-control-lg {
 .form-floating > .form-select, .form-floating > .dataTable-selector {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > .dataTable-input:not(:-moz-placeholder-shown) ~ label {
-    opacity: 0.65;
-    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, .form-floating > .dataTable-input:not(:-ms-input-placeholder) ~ label {
     opacity: 0.65;
@@ -4291,11 +4289,6 @@ textarea.form-control-lg {
     background-size: 100%;
 }
 
-.navbar-nav-scroll {
-    max-height: var(--bs-scroll-height, 75vh);
-    overflow-y: auto;
-}
-
 @media (min-width: 576px) {
     .navbar-expand-sm {
         flex-wrap: nowrap;
@@ -4964,7 +4957,6 @@ textarea.form-control-lg {
     float: left;
     padding-right: 0.5rem;
     color: #6c757d;
-    content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
 .breadcrumb-item.active {
     color: #6c757d;
@@ -5619,7 +5611,6 @@ textarea.form-control-lg {
 }
 
 .toast-container {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     max-width: 100%;
@@ -6581,7 +6572,7 @@ textarea.form-control-lg {
     }
 }
 .placeholder-wave {
-    -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+
     mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     -webkit-mask-size: 200% 100%;
     mask-size: 200% 100%;
@@ -11858,4 +11849,13 @@ body {
     width: 20px !important;
     font-size: 0.75rem;
     border-radius: 0.25rem !important;
+}
+
+.dataTable-selector {
+    display: none;
+}
+
+td {
+    border-bottom: 1px solid black
+;
 }
