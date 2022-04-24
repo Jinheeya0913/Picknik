@@ -42,7 +42,7 @@ button {
 
 #container{
 	position: relative;
-	background-image: url("/../resources/mainSlider1.png");
+	background-image: url("/resources/user/imgs/mainSlider1.png");
 	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
