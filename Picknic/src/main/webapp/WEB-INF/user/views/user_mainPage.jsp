@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,9 @@
 <div id="container" >
 
   <div class="header_container">
-    <header id="header"></header>
+      <%--    <header id="header"></header>--%>
+    <%@ include file="html/user_header.html"%>
+
   </div>
   <!-- 버튼 -->
   <div class="btn_container" >

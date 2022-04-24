@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -21,11 +21,8 @@
   <style><%@include file="/resources/user/css/common.css"%> </style>
   <style><%@include file="/resources/user/css/user_header.css"%> </style>
   <style><%@include file="/resources/user/css/user_mainPage.css"%> </style>
-
   <script><%@include file="/resources/user/js/jquery-3.6.0.js"%></script>
   <script><%@include file="/resources/user/js/header.js"%></script>
-
-
   <script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
 
 </head>
@@ -36,7 +33,9 @@
 <div id="container" >
 
   <div class="header_container">
-    <header id="header"></header>
+      <%--    <header id="header"></header>--%>
+    <%@ include file="html/user_header.html"%>
+
   </div>
   <!-- 버튼 -->
   <div class="btn_container" >
