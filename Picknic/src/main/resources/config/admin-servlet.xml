@@ -9,14 +9,14 @@
     <mvc:annotation-driven></mvc:annotation-driven>
     <mvc:resources mapping="/resources/**" location="/resources/user"/>
 
-    <context:component-scan base-package="kg.twojin.picknic.user"></context:component-scan>
+    <context:component-scan base-package="kg.twojin.picknic.admin"></context:component-scan>
 
 
 
     <!--  뷰 리졸버 셋팅  -->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/user/views/"/>
+        <property name="prefix" value="/WEB-INF/admin/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
