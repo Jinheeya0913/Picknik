@@ -17,15 +17,12 @@
   <%--  <link rel="stylesheet" type="text/css" href="${path}/WEB-INF/user/css/user_mainPage.css">--%>
 
   <%--  <script src="${path}/WEB-INF/user/js/jquery-3.6.0.js"></script>--%>
-  <style><%@include file="/WEB-INF/user/css/reset.css"%></style>
-  <style><%@include file="/WEB-INF/user/css/common.css"%> </style>
-  <style><%@include file="/WEB-INF/user/css/user_header.css"%> </style>
-  <style><%@include file="/WEB-INF/user/css/user_mainPage.css"%> </style>
-
-  <script><%@include file="/WEB-INF/user/js/jquery-3.6.0.js"%></script>
-  <script><%@include file="/WEB-INF/user/js/header.js"%></script>
-
-
+  <style><%@include file="/resources/user/css/reset.css"%></style>
+  <style><%@include file="/resources/user/css/common.css"%> </style>
+  <style><%@include file="/resources/user/css/user_header.css"%> </style>
+  <style><%@include file="/resources/user/css/user_mainPage.css"%> </style>
+  <script><%@include file="/resources/user/js/jquery-3.6.0.js"%></script>
+  <script><%@include file="/resources/user/js/header.js"%></script>
   <script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
 
 </head>
@@ -58,7 +55,7 @@
 
 </div>
 
-    <script type="text/javascript"><%@include file="/WEB-INF/user/js/user_mainPage.js"%></script>
+    <script type="text/javascript"><%@include file="/resources/user/js/user_mainPage.js"%></script>
 
 <div>
   <!-- 푸터 영역 -->
