@@ -108,9 +108,6 @@ button {
 }
 
 
-
-
-
 /*글꼴*/
 
 .slider_title{
@@ -119,6 +116,12 @@ button {
 
 .slider_title:hover{
 	color: #64b5f6;
+}
+
+@media screen and (max-width: 1199px) {
+	.m_toggle_button {
+		position: absolute;
+	}
 }
 
 

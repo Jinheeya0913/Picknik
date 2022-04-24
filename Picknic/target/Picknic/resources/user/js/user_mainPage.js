@@ -5,7 +5,7 @@ function toggleImg() {
     if (num==1) {
         //이미지 변경s
         bgImage.style.background =
-            "url(/resources/user/mainSlider2.png)" +
+            "url('/resources/user/imgs/mainSlider2.png')" +
             "no-repeat";
         bgImage.style.backgroundSize = "cover";
         bgImage.style.position="absolute";
@@ -15,7 +15,7 @@ function toggleImg() {
     }
     else if(num==2){
         bgImage.style.background =
-            "url('/resources/user/mainSlider1.png')" +
+            "url('/resources/user/imgs/mainSlider1.png')" +
             "no-repeat";
         bgImage.style.backgroundSize = "cover";
         bgImage.style.position="absolute";
