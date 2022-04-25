@@ -1,20 +1,41 @@
 package kg.twojin.picknic.admin.controller;
 
 
+import kg.twojin.picknic.user.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class AdminController {
+public class AdminMenuController {
 
-
-//    관리자 로그인
-    @RequestMapping(value = "/login.mdo")
+    //    관리자 로그인
+    @RequestMapping(value = "/adminPage.mdo")
     public ModelAndView adLogin() {
+        // 페이지로 넘어오면 자동적으로 로긴으로 넘어감
         ModelAndView mv = new ModelAndView();
         mv.setViewName("admin_login");
+        return mv;
+    }
+
+//    초기 페이지
+
+    @RequestMapping(value = "/index.mdo")
+    public ModelAndView adIndex() {
+        ModelAndView mv = new ModelAndView();
+        // 임시적으로 헤더와 푸터만 지정. 로그인 성공 후 초기 페이지 생성하면 그걸로 교체
+        mv.setViewName("admin_indexPage");
+        return mv;
+    }
+
+//   회원 목록 페이지
+
+    @RequestMapping(value = "/userList.mdo")
+    public ModelAndView getUserList() {
+        // 회원을 List로 받아서 Object에 담아 넘길 것!
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("admin_userList");
         return mv;
     }
 
@@ -26,7 +47,6 @@ public class AdminController {
 //
 //
 //    }
-
 
 
 //    @PostMapping("/loginCheck.mdo")
