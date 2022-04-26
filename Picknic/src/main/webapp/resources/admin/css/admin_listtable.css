@@ -1,0 +1,6 @@
+.checkAll_container {
+    margin: 10px 10px 10px 10px;
+}
+.checkAll_container>span {
+    text-indent: 30px;
+}

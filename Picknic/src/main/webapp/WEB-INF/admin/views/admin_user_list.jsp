@@ -50,9 +50,9 @@
                         <table id="datatablesSimple">
                             <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
+                                <th>이름</th>
+                                <th>이메일</th>
+                                <th>Of</th>
                                 <th>Age</th>
                                 <th>Start date</th>
                                 <th>Salary</th>

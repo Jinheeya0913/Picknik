@@ -10,7 +10,7 @@ public class UserSecssionController {
     @RequestMapping(value = "/getUserList.mdo")
     public ModelAndView userList () {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("admin_userList");
+        mav.setViewName("admin_user_list");
         return mav;
     }
 }

@@ -40,7 +40,7 @@
                         <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                              data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="login.html">조회</a>
+                                <a class="nav-link" href="/adminList.mdo">조회</a>
                                 <a class="nav-link" href="/registAdmin.mdo">추가</a>
                                 <a class="nav-link" href="password.html">Forgot Password</a>
                             </nav>
@@ -56,8 +56,8 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <%--        페이지 이동 구간         --%>
                                 <a class="nav-link" href="/userList.mdo">조회</a>
-                                <a class="nav-link" href="404.html">생성</a>
-                                <a class="nav-link" href="500.html">관리</a>
+                                <a class="nav-link" href="404.html">블랙리스트</a>
+                                <a class="nav-link" href="500.html">렌탈신청</a>
                             </nav>
                         </div>
                     </nav>

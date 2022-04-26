@@ -23,7 +23,6 @@
 
     <%@include file="admin_side.jsp" %>
 
-
     <div id="layoutSidenav_content">
         <%--가운데--%>
         <main class="main_container">
