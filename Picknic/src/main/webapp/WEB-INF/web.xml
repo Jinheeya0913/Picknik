@@ -3,15 +3,15 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Archetype Created Web Application</display-name>
 
+<!--    <absolute-ordering/>-->
+
+    <display-name>Archetype Created Web Application</display-name>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
-
-
 
     <filter>
         <filter-name>encodingFilter</filter-name>
@@ -30,27 +30,50 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    
+<!--    <servlet>-->
+<!--        <servlet-name>dispatcher</servlet-name>-->
+<!--        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
+<!--        <load-on-startup>1</load-on-startup>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>dispatcher</servlet-name>-->
+<!--        <url-pattern>/</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+
 
     <servlet>
-        <servlet-name>action</servlet-name>
+        <servlet-name>do</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/config/presentation-layer.xml</param-value>
+            <param-value>classpath:config/user-servlet.xml</param-value>
         </init-param>
     </servlet>
 
-
     <servlet-mapping>
-        <servlet-name>action</servlet-name>
+        <servlet-name>do</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>mdo</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:config/admin-servlet.xml</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>mdo</servlet-name>
+        <url-pattern>*.mdo</url-pattern>
+    </servlet-mapping>
 
-
-
-
-
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/user/views/user_mainPage.jsp</welcome-file>
+    </welcome-file-list>
 
 </web-app>
 

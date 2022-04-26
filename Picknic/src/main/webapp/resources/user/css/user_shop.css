@@ -1,0 +1,38 @@
+
+.categori {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.cate_father>li {
+    display: block;
+}
+
+.cate_all{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.cate_all>li>p{
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+.categori_li {
+    text-indent: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.price{
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1999px) {
+
+}
+
+

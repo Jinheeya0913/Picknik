@@ -1,0 +1,132 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+
+.m_logo >a {
+
+	color: #f0f0f0;
+}
+
+.m_toggle_button {
+	right: -20%;
+	color: #f0f0f0;
+}
+
+
+.header_container {
+	position: absolute;
+	top: 0;
+	background-color: rgba(0, 0 , 0, 1%);
+	width: 100%;
+	z-index: 2;
+}
+
+.logo > a {
+	color: #f0f0f0;
+}
+
+#menu_button >li > a{
+	color: #f0f0f0;
+}
+
+
+
+button {
+	width: 50%;
+	height: 50%;
+}
+
+
+#container{
+	position: relative;
+	background-image: url("/resources/user/imgs/mainSlider1.png");
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+.btn_container{
+	display: table;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+.btn_container > ul{
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.btn_container>ul>li{
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+/* 버튼 */
+
+.btn_left{
+	left: 30px;
+}
+
+
+.btn_container>ul>li>a>i {
+	font-size: 2.0rem
+}
+
+.btn_right{
+	right: 30px;
+}
+
+
+
+.slider_title{
+	position: absolute;
+	font-size: 2rem;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	top: 50%;
+	left: 0;
+}
+
+.slider_title > a {
+	width: 100%;
+	text-align: center;
+
+}
+
+
+/*글꼴*/
+
+.slider_title{
+	color: white;
+}
+
+.slider_title:hover{
+	color: #64b5f6;
+}
+
+@media screen and (max-width: 1199px) {
+	.m_toggle_button {
+		position: absolute;
+	}
+}
+
+
+
+
+
+
+

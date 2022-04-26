@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <context:component-scan base-package="kg.twojin.picknic"></context:component-scan>
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+
+<!--    &lt;!&ndash;  DB 정보  &ndash;&gt;-->
+<!--    <context:property-placeholder location="classpath:config/database.properties"/>-->
+<!--    <bean id="dataSource"-->
+<!--          class="org.apache.commons.dbcp2.BasicDataSource"-->
+<!--          destroy-method="close">-->
+<!--        <property name="driverClassName" value="${jdbc.driver}" />-->
+<!--        <property name="url" value="${jdbc.url}" />-->
+<!--        <property name="username" value="${jdbc.username}" />-->
+<!--        <property name="password" value="${jdbc.password}" />-->
+<!--    </bean>-->
+
+<!--    <bean id="jdbcTemplate"-->
+<!--          class="org.springframework.jdbc.core.JdbcTemplate">-->
+<!--        <property name="dataSource" ref="dataSource"></property>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash;  Mybaits  &ndash;&gt;-->
+<!--    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource" />-->
+<!--        <property name="configLocation" value="classpath:mybatis-config.xml" />-->
+<!--    </bean>-->
+
+<!--    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">-->
+<!--        <constructor-arg ref="sessionFactory" />-->
+<!--    </bean>-->
+
+
+
+
+
+
 
 </beans>

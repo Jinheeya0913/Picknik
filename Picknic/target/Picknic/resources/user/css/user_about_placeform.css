@@ -1,0 +1,158 @@
+#info_02, #info_03, #info_04 {
+    display: none;
+}
+
+
+.place_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+
+
+}
+
+.img_slide {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+
+.img_slide >ul {
+    top: 0;
+    left: 0;
+    width: 5000px;
+}
+
+.list_img {
+    display: inline-block;
+    text-align: center;
+}
+
+
+.img_source {
+    width: 100%;
+}
+
+
+#back {
+    position: absolute;
+    top: 130px;
+    left: 5%;
+    font-size: 2.5rem;
+    color: tomato;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+#next {
+    position: absolute;
+    top: 130px;
+    right: 5%;
+    font-size: 2.5rem;
+    color: tomato;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+/* 설명 */
+.place_info {
+    display: flex;
+    width:100%;
+    height: 30%;
+    flex-direction: row;
+}
+
+.place_info>div {
+    padding: 10px 10px;
+}
+
+
+.info_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+.info_box >ul {
+    height: 100%;
+}
+
+
+.place_number {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.place_name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.place_details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.place_number {
+    font-size: 1.5rem;
+}
+
+.place_details>span {
+    font-size: 1.0rem;
+}
+
+.tail_details {
+    text-align: right;
+}
+
+
+.place_descript {
+    width: 100%;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.place_descript > span {
+    font-size: 1.0rem;
+}
+
+
+@media screen and (min-width:768px){
+
+    .place_name {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .place_details>span {
+        font-size: 1.0rem;
+    }
+
+    .place_number {
+        font-size: 1.5rem;
+    }
+    .place_descript > span {
+        font-size: 1.0rem;
+    }
+}
+

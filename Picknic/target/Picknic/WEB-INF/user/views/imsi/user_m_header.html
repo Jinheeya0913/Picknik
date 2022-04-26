@@ -1,0 +1,135 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+<link rel="stylesheet" id="reset-css" href="../../css/reset.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="common-css" href="../../css/common.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="../../css/imsi/user_m_header.css"/>
+
+<script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<header>
+	<div class="m_outer_header">
+
+		<div class="m_inner_header">
+
+			<div class="m_inner_section1">
+
+				<!-- 로고 -->
+				<div class="m_logo">
+					<a href="" class="m_a_tag">exhibition</a>
+				</div>
+
+
+		<!-- 토글 버튼 -->
+		<button type="button" class="m_toggle_button"><i class="fa-solid fa-bars"></i></button>
+		<!-- 토글 메뉴 시작 -->
+		<div class="m_toggle_menu">
+
+				<!--top 영역-->
+				<div class="m_top_login_section">
+					<a href="#login" id="m_login_button" class="m_a_tag">LOGIN</a>
+					<a href="#mypage" id="m_mypage_button" class="m_a_tag">MYPAGE</a>
+					<a href="#cart" id="m_cart_button" class="m_a_tag">CART</a>
+					<button class="x"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+
+				<!--middle 영역-->
+				<div class="m_middle_list_section">
+
+					<!-- exhibition -->
+					<!-- 날짜선택, 진행중전시, 완료전시 / 구매,찜 -->
+					<li id="m_menu_exhibition" class="menu-item menu-item-type-taxonomy menu-item-object-exhibition-category menu-item-98">
+						<a href="http://piknic.kr/exhibition-category/current/" class="m_a_tag">exhibition</a></li>
+
+					<!-- shop -->
+					<!-- 상품목록조회, 상품구매, 장바구니(찜) -->
+					<li id="m_menu_shop" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2063">
+						<a href="http://piknic.kr/product-category/shop/" class="m_a_tag">shop</a></li>
+
+					<!-- rental -->
+					<!-- 대관 날짜, 시간, 홀  -->
+					<li id="m_menu_rental" class="menu-item menu-item-type-taxonomy menu-item-object-program-category menu-item-99">
+						<a href="http://piknic.kr/program-category/current/" class="m_a_tag">rental</a></li>
+
+					<!-- about picknic : hall info -->
+					<!-- 오시는길, 내부시설정보, FAQ  -->
+					<li id="m_menu_about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130">
+						<a href="http://piknic.kr/about-piknic/piknic/" class="m_a_tag">about picknic</a></li>
+				</div>
+
+				<!-- bottom 영역 -->
+				<div class="m_bottom_section">
+					<!-- 텍스트 영역 -->
+					<div id="m_follow_us">FOLLOW US</div>
+					<!-- sns아이콘 전체 영역 -->
+					<div class="m_sns_link">
+						<!-- 인스타그램 링크 아이콘 -->
+						<a class="m_btn-icon1" href=https://instagram.com/picknic.kr target="_blank">
+							<i class="fa-brands fa-instagram"></i></a>
+						<!-- 페이스북 링크 아이콘 -->
+						<a class="m_btn-icon2" href=https://facebook.com/picknic.kr target="_blank">
+							<i class="fa-brands fa-facebook-square"></i></a>
+					</div> <!-- sns_link -->
+
+				<!-- Calendar 전체 영역 -->
+				<div class="m_calendar_section">
+				<!-- 캘린더 영역 -->
+				<div class="m_calendar" data-link="http://piknic.kr/schedule/">
+					<!-- 캘린더상단 영역 -->
+					<div class="m_handle">
+						<!-- 캘린더 날짜표시 영역 -->
+						<span id="m_calendar-date" class="m_calendar-date">2022.4.14 THU</span>
+						<span class="open"><i class="fa-solid fa-angle-up"></i></span>
+						<!-- 캘린더 메뉴탭 오픈시 상단 '닫기' 버튼 영역 -->
+						<span class="m_close">CLOSE</span>
+					</div> <!--m_handle -->
+				</div> <!--m_calendar-->
+				</div>
+				<!-- 캘린더 -->
+				<!-- /캘린더 -->
+
+					</div> <!--m_bottom_section -->
+
+
+
+
+			</div> <!-- m_menu_bar -->
+			<!--토글메뉴 끝 -->
+
+
+			</div> <!--m_inner_section1-->
+		</div> <!--m_inner_header-->
+	</div> <!--m_outer_header-->
+</header>
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$(".m_toggle_button").click(function () {
+			$(".m_toggle_menu").slideToggle();
+		});
+
+		$(".x").click(function () {
+			$(".m_toggle_menu").slideToggle('hide');
+		});
+	});
+</script>
+
+<!--<script>-->
+<!--document.addEventListener('DOMContentLoaded', function() {-->
+<!--	document.querySelector(".m_toggle_button").addEventListener("click", function (e) {-->
+<!--		if (document.querySelector(".x").classList.contains("on")) {-->
+<!--			//메뉴닫힘-->
+<!--			document.querySelector("m_toggle_menu").classList.remove("on");-->
+<!--		} else {-->
+<!--			//메뉴펼쳐짐-->
+<!--			document.querySelector("m_toggle_menu").classList.add("on");-->
+<!--		}-->
+<!--	});-->
+<!--});-->
+
+<!--</script>-->
+

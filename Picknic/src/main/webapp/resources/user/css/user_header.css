@@ -1,0 +1,371 @@
+/*px 말고 %로 설정하기*/
+
+
+/*모바일(기본) 1200이하 */
+@media screen and (max-width:1999px) {
+
+    .outer_header {
+        display: none;
+    }
+
+
+
+/*.a_tag {display: none;}*/
+/*.user_button {display: none;}*/
+/*#calendar_date {display: none;}*/
+/*.close {display: none;}*/
+/*.handle {display: none;}*/
+/*.calendar-date {display: none;}*/
+
+
+
+/****************** mobile css *******************/
+
+    /* 메인 화면 전체 영역 */
+    .m_outer_header {
+        position: sticky;
+        z-index: 10;
+        display: flex;
+        width: 100%;
+
+    }
+
+    /* 메인 화면 내부 영역 */
+    .m_inner_header {
+        display: flex;
+        position: relative;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .m_inner_section1 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .m_inner_section2 {
+        display: flex;
+        width: 100%;
+    }
+    .m_logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .m_logo >a {
+        font-size:2.5rem;
+        color: #000000;
+    }
+
+
+    .m_a_tag {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    /*스크롤바*/
+    .m_toggle_menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    /*토글 버튼*/
+    .m_toggle_button {
+        position: absolute;
+        font-size: 2.5rem;
+        top: 20px;
+        right: 8% ;
+    }
+
+    /*토글 아이콘*/
+    .m_toggle_button > i {
+        font-size: 2rem;
+
+    }
+
+    .menubar.on {
+        right: 0;
+    }
+
+
+    /******토글 화면 영역*******/
+    /* 토글 메뉴*/
+    .m_toggle_menu {
+        display: flex;
+        position: fixed;
+
+        flex-direction: column;
+        background-color: linen;
+
+        width: 50%;
+        height: 100%;
+
+        top: 0px;
+        left: 50%;
+        right: 0;
+        padding: 15px 5px 5px 5px;
+
+        transition: left .3s ease-in-out;
+    }
+
+    /* 토글 top  */
+
+
+    .m_top_login_section {
+        display: flex;
+        top: 0;
+        border-bottom: 1px solid black;
+    }
+    /*로그인 영역 */
+
+
+    .m_top_login {
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+    }
+
+    #m_login_button, #m_mypage_button {
+        font-size: 8pt;
+        margin-right: 9%;
+    }
+
+    #m_cart_button {
+        font-size: 8pt;
+    }
+
+    .x {
+        width: 20%;
+        right: 0;
+        font-size: 1.3rem;
+    }
+
+    /* 토글 middle */
+    .m_middle_list_section {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+
+    }
+
+    #m_menu_exhibition {
+        margin-top: 15px;
+    }
+
+    #m_menu_shop {
+        margin-top: 15px;
+    }
+
+    #m_menu_rental {
+        margin-top: 15px;
+    }
+
+    #m_menu_about {
+        margin-top: 15px;
+    }
+
+    /* 토글 middle2 */
+    .m_middle_icon_section {
+        width: 100%;
+    }
+
+    /* 텍스트 */
+    #m_follow_us {
+        font-size: 7pt;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    /* 아이콘 */
+    .m_sns_link {
+        display: inline-block;
+        margin-left: 70%;
+        width: 15%;
+    }
+
+    /* 아이콘 버튼1 */
+    .m_btn-icon1 {
+        color: black;
+    }
+
+    /* 아이콘 버튼2 */
+    .m_btn-icon2 {
+        color: black;
+        margin-left: 13%;
+    }
+
+    /*  토글 bottom */
+    .m_calendar_section {
+        /*position: relative;*/
+        width: 100%;
+        height: 20%;
+        float: bottom;
+    }
+
+    /*캘린더 div*/
+    .m_handle {
+        position: absolute;
+        background-color: lightsteelblue;
+        height: 52px;
+        line-height: 40px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    /*캘린더 텍스트*/
+    #m_calendar-date {
+        margin-left: 10px;
+    }
+
+    /*캘린더 'open'*/
+    .open {
+        float: right;
+
+        margin-right: 12%;
+    }
+
+    /*캘린더 'close'*/
+    .m_close {
+        /*margin-left: 20%;*/
+    }
+
+    /* mobile pc common css */
+    li {
+        list-style-type: none;
+        float: left;
+    }
+
+
+     /*토글 메뉴 안 보이게 처리*/
+    .m_toggle_menu {
+        display: none;
+    }
+    /*.m_toggle_button {*/
+    /*    display: block;*/
+    /*}*/
+
+}
+
+/*pc(1200이상 일때 화면 셋팅)*/
+@media screen and (min-width:1200px) {
+
+    .m_outer_header {
+        display:none;
+    }  /*모바일 화면 숨기기*/
+
+    .m_inner_section1 {
+        display: none;
+    }
+
+
+    /******************** pc css ********************/
+    /* 전체 */
+    .outer_header{
+        display: flex;
+        position: sticky;
+        width: 100%;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+    }
+
+    /* 이너블록 */
+    .inner_header {
+        width:100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .inner_section1{
+        width: 100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .inner_section2{
+        width:40%;
+        height:38%;
+        display: flex;
+        /*align-items: center;*/
+    }
+
+    .logo{
+        font-size:2.5rem;
+        margin-top:50px;
+        margin-right: 50px;
+        margin-left: 30px;
+    }
+
+    .a_tag {
+        text-decoration: none;
+        color: black;
+    }
+
+    #menu_button{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto 20px 0 20px;
+        bottom: 0;
+
+        font-weight: bold;
+
+    }
+
+
+    /*1rem : 16px */
+    .user_button{
+        display: inline-block;
+        width: 100%;
+        font-size:10px;
+        line-height: 45px;
+    }
+
+    .btn_span {
+        float: right;
+
+        margin-left: 10%;
+        margin-right: 10%;
+
+
+    }
+
+    .calendar{
+        background-color: darkorange;
+        display: inline-block;
+        width:50%;
+        height: 100%;
+        text-align: center;
+        font-size:12px;
+    }
+
+    #calendar-date{
+        line-height: 40px;
+    }
+
+    /*캘린더 열림 아이콘*/
+    .close{
+        margin-left:20%;
+    }
+
+    .btAndCal{
+        display: flex;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+    }
+
+    /* mobile pc common css */
+
+}
+
+
+
+

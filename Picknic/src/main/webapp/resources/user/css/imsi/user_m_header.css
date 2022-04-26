@@ -1,0 +1,231 @@
+/*px 말고 %로 설정하기*/
+
+/*1450이하일때 토글메뉴 숨기기*/
+@media screen and(min-width:900px){
+    .m_toggle {display:none;}
+}
+
+@media screen and (max-width: 768px ){
+
+    /* 전체 */
+    .m_outer_header {
+        display: flex;
+        width: 96%;
+        margin-left: 2%;
+        height: 10px;
+        background-color: white;
+        position: sticky;
+    }
+
+    /* 이너블록 */
+    .m_inner_header {
+        background-color: #faf8f0;
+        width: 100%;
+        height: 0px;
+        position: relative;
+        border-bottom: 1.5px solid black;
+        display: flex;
+        align-items: center;
+    }
+
+    .m_inner_section1 {
+        background-color: #faf8f0;
+
+        width: 100%;
+        height: 10%;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .m_inner_section2 {
+        background-color: #faf8f0;
+        width: 100%;
+        height: 10%;
+        margin-bottom: 61px;
+        position: relative;
+        display: flex;
+    }
+
+    .m_logo {
+        font-size: 2rem;
+        margin-top: -60px;
+        margin-left: 1px;
+
+    }
+
+    .m_a_tag {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* 토글버튼 */
+    .m_toggle_button{
+       margin-left: 65%;
+       margin-top:-45px;
+    }
+
+    .m_toggle_button i {
+        font-size: 1rem;
+    }
+
+    .menubar.on {
+        right:0;
+    }
+
+    /* 토글 메뉴*/
+    .m_toggle_menu{
+        background-color: antiquewhite;
+        width:50%;
+        height:100%;
+        position:fixed;
+        top:-7px;
+        left:50%;
+        right:0;
+        overflow:auto;
+        padding: 9px 25px 45px 9px;
+        transition: left .3s ease-in-out;
+    }
+
+    /* 로그인 영역  */
+    .m_top_login_section {
+        margin-bottom: 25px;
+    }
+
+    #m_login_button, #m_mypage_button, #m_cart_button {
+        font-size: 9pt;
+        margin-right:20px;
+    }
+
+    .x {
+        margin-left: 7%;
+        margin-top: 7px;
+        font-size: 1.3rem;
+    }
+
+    /* 메뉴 리스트 영역 */
+    .m_middle_list_section {
+        border-top: 1px solid black;
+        width:90%;
+        margin: 10px 10px 10px 10px;
+    }
+
+    #m_menu_exhibition {
+        margin-top: 7%;
+        margin-left: 1%;
+    }
+
+    #m_menu_shop {
+        margin-top: 7%;
+        margin-right: 80%;
+    }
+
+    #m_menu_rental {
+        margin-top: 7%;
+        margin-right: 80%;
+    }
+
+    #m_menu_about{
+        margin-top: 7%;
+        margin-right: 50%;
+    }
+
+
+    /*1rem : 16px */
+    /*.user_button {*/
+    /*    background-color: yellow;*/
+    /*    display: inline-block;*/
+    /*    width: 45%;*/
+    /*    height: 90%;*/
+    /*    margin-bottom: 20px;*/
+    /*    text-align: center;*/
+    /*    font-size: 10px;*/
+    /*    line-height: 55px;*/
+    /*}*/
+
+
+    /*followus section*/
+    .m_bottom_section{
+        border-top: 1px solid black;
+        width:91%;
+        height:11%;
+        margin-top:150px;
+
+    }
+
+    /* 텍스트 */
+    #m_follow_us{
+        /*position:absolute;*/
+        font-size:8pt;
+        margin-top:7%;
+        display: flex;
+
+    }
+
+    /* 아이콘 div */
+    .m_sns_link{
+        /*position:absolute;*/
+        margin-top: -6%;
+        margin-left:75%;
+        width:43%;
+        display: flex;
+    }
+
+    /* 아이콘 버튼1 */
+    .m_btn-icon1{
+        color:black;
+    }
+
+    /* 아이콘 버튼2 */
+    .m_btn-icon2{
+        color:black;
+        margin-left: 18px;
+    }
+
+
+    .m_calendar {
+        background-color: coral;
+        display: flex;
+        /*margin-left: 5%;*/
+        /*width: 93%;*/
+        /*height: 10%;*/
+        /*margin-bottom: 45px;*/
+        /*text-align: center;*/
+        /*color: white;*/
+        /*font-size: 12px;*/
+
+        /*margin-top:170px;*/
+    }
+
+    .m_handle{
+        background-color: darkcyan;
+    }
+
+    #m_calendar-date {
+        /*line-height: 40px;*/
+    }
+
+    .open{
+
+    }
+
+    /*캘린더 열림 아이콘*/
+    .m_close {
+        /*margin-left: 20%;*/
+    }
+
+
+    li {
+        list-style-type: none;
+        float: left;
+        margin-left: 1px;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    #m_menu_button {display:none;}
+    .m_user_button {display:none;}
+    .m_calendar {display:none;}
+}
+

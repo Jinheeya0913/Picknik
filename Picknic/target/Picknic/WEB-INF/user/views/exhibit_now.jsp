@@ -10,14 +10,14 @@
 
     <link rel='stylesheet' id='reset-css' href='../css/reset.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='common-css' href='../css/common.css' type='text/css' media='all'/>
-    <link rel="stylesheet" type="text/css" href="../css/exhibition_now.css">
-    <link rel="stylesheet" type="text/css" href="../css/gallery_form.css">
-    <link rel="stylesheet" type="text/css" href="../css/sidemenu.css">
+    <link rel="stylesheet" type="text/css" href="../css/user_exhibition_detail.css">
+    <link rel="stylesheet" type="text/css" href="../css/user_exhibit.gallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/user_sideMenu.css">
 
     <!--Script-->
 
     <script src="../js/jquery-3.6.0.js"></script>
-    <script src="../js/sidemenu.js"></script>
+    <script src="../js/user_side.js"></script>
 
     <title>Exhibition Now</title>
 </head>

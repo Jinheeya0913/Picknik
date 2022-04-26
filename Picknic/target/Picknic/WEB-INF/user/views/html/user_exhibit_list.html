@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    <!-- Css -->
+
+      <link rel='stylesheet' id='reset-css' href='../css/reset.css' type='text/css' media='all'/>
+      <link rel='stylesheet' id='common-css' href='../css/common.css' type='text/css' media='all'/>
+      <link rel='stylesheet' id='style-css' href='../css/user_exhibit.gallery.css' type='text/css' media='all'/>
+      <link rel="stylesheet" type="text/css" href="../css/user_sideMenu.css">
+
+      <link rel="stylesheet" type="text/css" href="../css/user_header.css"/>
+      <link rel="stylesheet" type="text/css" href="../css/user_footer.css"/>
+
+
+    <!--Script-->
+      <script src="../js/jquery-3.6.0.js"></script>
+      <script src="https://kit.fontawesome.com/2f0c3a79f6.js" crossorigin="anonymous"></script>
+
+
+      <script type="text/javascript">
+        $(function () {
+          $(".m_toggle_button").click(function () {
+            $(".m_toggle_menu").slideToggle();
+          });
+
+          $(".x").click(function () {
+            $(".m_toggle_menu").slideToggle('hide');
+          });
+        });
+      </script>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=clevice-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+      <title>Exhibition Before</title>
+    </head>
+
+<body>
+
+  <div class="header_container">
+    <%@ include file="user_header.html"%>
+  </div>
+
+
+
+
+  <div id="container" class="container">
+
+
+    <!-- 사이드 메뉴 : JS  -->
+    <%@ include file="user_sideMenu.html"%>
+
+    <div class="archive_container">
+      <div class="col-lg-4 col-sm-5">
+        <div class="row-item-list">
+          <article class="col-lg-2 col-sm-half item">
+            <div class="item-thumbnail"><a href="../user_exhibit_detail.html"><img width="1000" height="500" src="../resources/article_2.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" /></a></div>
+            <div class="item-title"><div class="text-inner"><a href="https://www.naver.com">무성영화극장 Silent Film&#038;Live</a></div></div>
+          </article>
+          <article class="col-lg-2 col-sm-half item">
+            <div class="item-thumbnail"><a href="../user_exhibit_detail.html"><img width="1000" height="500" src="../resources/article_2.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" /></a></div>
+            <div class="item-title"><div class="text-inner"><a href="https://www.daum.net">무성영화극장 Silent Film&#038;Live</a></div></div>
+          </article>
+          <article class="col-lg-2 col-sm-half item">
+            <div class="item-thumbnail"><a href="../user_exhibit_detail.html"><img width="1000" height="500" src="../resources/article_3.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" /></a></div>
+            <div class="item-title"><div class="text-inner"><a href="#">무성영화극장 Silent Film&#038;Live</a></div></div>
+          </article>
+          <article class="col-lg-2 col-sm-half item">
+            <div class="item-thumbnail"><a href="../user_exhibit_detail.html"><img width="1000" height="500" src="../resources/article_4.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" /></a></div>
+            <div class="item-title"><div class="text-inner"><a href="#">무성영화극장 Silent Film&#038;Live</a></div></div>
+          </article>
+          <article class="col-lg-2 col-sm-half item">
+            <div class="item-thumbnail"><a href="../user_exhibit_detail.html"><img width="1000" height="500" src="../resources/article_2.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" /></a></div>
+            <div class="item-title"><div class="text-inner"><a href="#">무성영화극장 Silent Film&#038;Live</a></div></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
+
+
+
+

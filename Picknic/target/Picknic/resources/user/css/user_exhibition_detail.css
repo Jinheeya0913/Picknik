@@ -1,0 +1,149 @@
+.box_img{
+    width: 100%;
+    background-size: cover;
+}
+
+.m_outer_header {
+    display: block;
+    width: 100%;
+}
+
+.side-menu {
+    width: 30%;
+}
+
+.m_inner_section1{
+    height: 80px;
+}
+
+/* 사이드 메뉴 재설정 */
+
+#side_list_1 {
+    font-weight: bold;
+}
+
+.journalSection {
+
+    position: relative;
+}
+/*Journal 섹션 */
+
+.journal_img{
+    width: 100%;
+}
+
+
+.exhibit_info{
+    display: flex;
+    position: relative;
+}
+
+/*중요 정보*/
+.info_head{
+    width: 50%;
+    margin-top: 10px;
+    border-right: none;
+}
+
+.head_title{
+    height: 30%;
+    margin-bottom: 50px;
+}
+
+.p_title {
+    font-size: 2.0rem;
+    font-weight: bolder;
+}
+
+.p_limit{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/*  내용  */
+.info_foot{
+    width: 50%;
+    margin: 10px 10px 10px 5px;
+}
+
+.description > p{
+        text-indent: 20px;
+        max-height: 300px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        overflow: scroll;
+        overflow-x: hidden;
+}
+
+#list_link_1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+    .exhibit_info{
+        flex-direction: column;
+    }
+    .info_head{
+        position: relative;
+        top: 0;
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+
+    .info_foot{
+        width: 100%;
+    }
+
+
+    .side-menu{
+        display: none;
+    }
+
+
+    .head_title{
+        width: 100%;
+    }
+
+
+    .head_limit{
+        display: inline-block;
+    }
+
+
+    .head_book{
+        display: inline-block;;
+        margin-left: 50px;
+    }
+
+    .head_book>a{
+        font-size: 1.5rem;
+        color: deepskyblue;
+    }
+
+@media screen and (min-width: 768px){
+
+
+
+    .exhibit_info{
+        flex-direction: row;
+    }
+
+    .info_head{
+        border-bottom: none;
+        border-right: 2px solid black;
+    }
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1200px){
+
+
+}
