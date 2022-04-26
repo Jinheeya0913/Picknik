@@ -35,7 +35,7 @@
 
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="password.html">비밀번호를 잊으셨습니까??</a>
-                                        <a class="btn btn-primary" href="index.html">로그인</a>
+                                        <a class="btn btn-primary" href="/index.mdo">로그인</a>
                                     </div>
                                 </form>
                             </div>

@@ -14,11 +14,13 @@ public class ManageAccountController {
     @RequestMapping(value = "/registAdmin.mdo")
     public ModelAndView registAdmin(@RequestBody AdminVO vo) {
         ModelAndView mv = new ModelAndView();
-        if (vo.getAd_adIs().equals("super")) {
-            mv.setViewName("admin_registerAD");
-            return mv;
-        }
-        return null;
+        mv.setViewName("admin_registerAD");
+        return mv;
+//        if (vo.getAd_adIs().equals("super")) {
+//            mv.setViewName("admin_registerAD");
+//            return mv;
+//        }
+//        return null;
     }
 
 
