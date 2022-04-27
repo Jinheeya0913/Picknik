@@ -14,9 +14,10 @@
     <link href="/resources/admin/css/admin_listtable.css" rel="stylesheet"/>
 
     <script src="/resources/admin/js/movePage.js"></script>
+    <script src="/resources/admin/js/common_wrongAcess.js"></script>
+    <script src="/resources/admin/js/admin_list.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="/resources/common/js/jquery-3.6.0.js"></script>
-    <script src="/resources/admin/js/checkAll.js"></script>
 
 </head>
 <body>
@@ -28,7 +29,7 @@
 <div id="layoutSidenav">
 
 
-    <%@include file="admin_side.jsp" %>
+    <%@include file="admin_common_side.jsp" %>
 
 
     <div id="layoutSidenav_content">
@@ -82,7 +83,7 @@
                                 <td>Javascript Developer</td>
                                 <td>
                                     <div style="float: right" class="button_container">
-                                        <input type="button" class="table_btn"  value="계정삭제">
+                                        <input type="button" class="table_btn" onclick="popup();"  value="계정삭제">
                                         <input type="button" class="table_btn"  value="계정수정">
                                     </div>
                                 </td>
@@ -94,7 +95,7 @@
                                 <td>Customer Support</td>
                                 <td>
                                     <div style="float: right" class="button_container">
-                                        <input type="button" class="table_btn"  value="계정삭제">
+                                        <input type="button" class="table_btn" onclick="rowDel(this);" value="계정삭제">
                                         <input type="button" class="table_btn"  value="계정수정">
                                     </div>
                                 </td>

@@ -7,7 +7,7 @@ function toAdminList() {
 }
 
 function toAdminCreate() {
-    $('.main_container').load('admin_registAd.jsp');
+    $('.main_container').load('admin_admin_registAd.jsp');
 }
 
 function toAdminModi() {

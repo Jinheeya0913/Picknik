@@ -21,7 +21,7 @@
 <%--sideMenu--%>
 <div id="layoutSidenav">
 
-    <%@include file="admin_side.jsp"%>
+    <%@include file="admin_common_side.jsp"%>
 
 
     <div id="layoutSidenav_content">

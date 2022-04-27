@@ -21,7 +21,7 @@
 <%--sideMenu--%>
 <div id="layoutSidenav">
 
-    <%@include file="admin_side.jsp" %>
+    <%@include file="admin_common_side.jsp" %>
 
     <div id="layoutSidenav_content">
         <%--가운데--%>
@@ -49,26 +49,41 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row mb-3">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="inputDepartment" type="text"
+                                                   placeholder="Enter Admin's Department"/>
+                                            <label for="inputDepartment">부서</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="inputRight" type="text"
+                                                   placeholder="Enter Admin's Access right"/>
+                                            <label for="inputRight">권한</label>
+                                        </div>
+                                    </div>
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="inputEmail" type="email"
                                                placeholder="name@example.com"/>
                                         <label for="inputEmail">ID</label>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" style="width: 100%">
                                             <div class="form-floating mb-3 mb-md-0">
                                                 <input class="form-control" id="inputPassword" type="password"
                                                        placeholder="Create a password"/>
                                                 <label for="inputPassword">비밀번호</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputPasswordConfirm" type="password"
-                                                       placeholder="Confirm password"/>
-                                                <label for="inputPasswordConfirm">비밀번호 확인</label>
-                                            </div>
-                                        </div>
+                                        <%--                                        <div class="col-md-6">--%>
+                                        <%--                                            <div class="form-floating mb-3 mb-md-0">--%>
+                                        <%--                                                <input class="form-control" id="inputPasswordConfirm" type="password"--%>
+                                        <%--                                                       placeholder="Confirm password"/>--%>
+                                        <%--                                                <label for="inputPasswordConfirm">비밀번호 확인</label>--%>
+                                        <%--                                            </div>--%>
+                                        <%--                                        </div>--%>
                                     </div>
                                     <div class="mt-4 mb-0">
                                         <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">계정

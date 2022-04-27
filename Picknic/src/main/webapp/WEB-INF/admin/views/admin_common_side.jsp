@@ -3,12 +3,17 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <div class="sb-sidenav-menu-heading">주요기능</div>
+                <div class="sb-sidenav-menu-heading">관리1</div>
                 <a class="nav-link" href="index.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     예약관리
                 </a>
-                <div class="sb-sidenav-menu-heading">기능</div>
+
+
+                <div class="sb-sidenav-menu-heading">관리2</div>
+
+
+
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                    aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -22,6 +27,22 @@
                         <a class="nav-link" href="../html/layout-sidenav-light.html">판매 통계</a>
                     </nav>
                 </div>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2"
+                   aria-expanded="false" aria-controls="collapseLayouts2">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    렌탈
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne"
+                     data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/rentalRequest.mdo">요청 목록</a>
+                        <a class="nav-link" href="/rentalNow.mdo">진행 렌탈</a>
+                        <a class="nav-link" href="/rentalDone.mdo">완료 렌탈</a>
+                    </nav>
+                </div>
+
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                    aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -31,12 +52,16 @@
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                      data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+
+
+                    <%--       관리자 계정     --%>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                            data-bs-target="#pagesCollapseAuth" aria-expanded="false"
                            aria-controls="pagesCollapseAuth">
                             관리자 계정
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+
                         <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                              data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
@@ -45,6 +70,8 @@
                                 <a class="nav-link" href="password.html">Forgot Password</a>
                             </nav>
                         </div>
+
+                    <%--    사용자 계정  목록   --%>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                            data-bs-target="#pagesCollapseError" aria-expanded="false"
                            aria-controls="pagesCollapseError">
@@ -56,10 +83,12 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <%--        페이지 이동 구간         --%>
                                 <a class="nav-link" href="/userList.mdo">조회</a>
-                                <a class="nav-link" href="404.html">블랙리스트</a>
-                                <a class="nav-link" href="500.html">렌탈신청</a>
+                                <a class="nav-link" href="/getBlackList.mdo">블랙리스트</a>
                             </nav>
                         </div>
+
+
+
                     </nav>
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class AdminSecssionController {
+public class AdminSectionController {
 
 
 
@@ -13,7 +13,7 @@ public class AdminSecssionController {
     @RequestMapping(value = "/adminList.mdo")
     public ModelAndView getadminList() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("admin_adminList");
+        mav.setViewName("admin_admin_list");
         return mav;
     }
 
@@ -23,10 +23,16 @@ public class AdminSecssionController {
     @RequestMapping(value = "/registAdmin.mdo")
     public ModelAndView createAdmin() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("admin_registAd");
+        mav.setViewName("admin_admin_registAd");
         return mav;
     }
 
+    @RequestMapping(value = "/updateAdmin.mdo")
+    public ModelAndView updateAdmin() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("");
+        return mav;
+    }
 
 
 //

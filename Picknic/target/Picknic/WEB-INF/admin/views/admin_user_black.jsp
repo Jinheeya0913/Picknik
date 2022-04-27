@@ -15,19 +15,19 @@
 
     <script src="/resources/admin/js/movePage.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-
     <script src="/resources/common/js/jquery-3.6.0.js"></script>
-    <script src="/resources/admin/js/checkAll.js"></script>
+
 </head>
 <body>
 <%--header--%>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <%@include file="admin_common_header.jsp"%>
+    <%@include file="admin_common_header.jsp" %>
 </nav>
 <%--sideMenu--%>
 <div id="layoutSidenav">
 
-    <%@include file="admin_side.jsp"%>
+
+    <%@include file="admin_common_side.jsp" %>
 
 
     <div id="layoutSidenav_content">
@@ -37,7 +37,7 @@
                 <h1 class="mt-4">사용자 계정</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="index.html">사용자</a></li>
-                    <li class="breadcrumb-item active">블랙리스트 관리</li>
+                    <li class="breadcrumb-item active">블랙리스트</li>
                 </ol>
                 <div class="card mb-4">
                     <div class="card-body">
@@ -50,61 +50,59 @@
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        블랙리스트 목록
+                        관리자 목록
+                    </div>
+                    <div class="checkAll_container">
+
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
+
                             <tr>
-                                <th class="th_checkAll">
-                                    <Label> <input type="checkbox" name="selectAll"> 전체 선택 </Label>
-                                </th>
                                 <th>이름</th>
                                 <th>이메일</th>
-                                <th>Of</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>사유</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
-                                <th>
-                                    <Label> <input type="checkbox" class="chkbox"> </Label>
-                                </th>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>이름</th>
+                                <th>이메일</th>
+                                <th>사유</th>
+                                <th></th>
                             </tr>
                             </tfoot>
                             <tbody>
                             <tr>
-                                <th>
-                                    <Label> <input type="checkbox" class="chkbox"> </Label>
-                                </th>
                                 <td>Michael Bruce</td>
-                                <td>Javascript Developer</td>
-                                <td>Singapore</td>
-                                <td>29</td>
-                                <td>2011/06/27</td>
-                                <td>$183,000</td>
+                                <td>ttttt@kgit.tj.com</td>
+                                <td>지속적으로 컴플레인을 함</td>
+                                <td>
+                                    <div class="button_container">
+                                        <input type="button" class="table_btn"  value="차단해제">
+                                        <input type="button" class="table_btn"  value="로그보기">
+                                    </div>
+                                </td>
+
                             </tr>
                             <tr>
-                                <th>
-                                    <Label> <input type="checkbox" class="chkbox"> </Label>
-                                </th>
                                 <td>Donna Snider</td>
-                                <td>Customer Support</td>
-                                <td>New York</td>
-                                <td>27</td>
-                                <td>2011/01/25</td>
-                                <td>$112,000</td>
+                                <td>bbbbb@kgit.tj.com</td>
+                                <td>사유 렌탈 신청을 장난으로 함</td>
+                                <td>
+                                    <div class="button_container">
+                                        <input type="button" class="table_btn"  value="차단해제">
+                                        <input type="button" class="table_btn"  value="로그보기">
+                                    </div>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
+                        <%-- 버튼 --%>
+
+
                     </div>
                 </div>
             </div>
@@ -112,13 +110,18 @@
 
         <%--   푸터     --%>
         <footer class="py-4 bg-light mt-auto">
-            <%@ include file="admin_common_footer.jsp"%>
+            <%@ include file="admin_common_footer.jsp" %>
         </footer>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 <script src="/resources/admin/js/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="/resources/admin/js/datatables-simple-demo.js"></script>
+
+<%--버튼 --%>
+
+
 </body>
 </html>

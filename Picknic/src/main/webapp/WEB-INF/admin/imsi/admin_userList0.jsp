@@ -21,7 +21,7 @@
 <%--sideMenu--%>
 <div id="layoutSidenav">
 
-    <%@include file="../views/admin_side.jsp"%>
+    <%@include file="../views/admin_common_side.jsp"%>
 
     <div id="layoutSidenav_content">
         <%--가운데--%>

@@ -50,7 +50,6 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-
                                             <div class="form-floating">
                                                 <input class="form-control" id="inputDepartment" type="text"
                                                        placeholder="Enter Admin's Department"/>

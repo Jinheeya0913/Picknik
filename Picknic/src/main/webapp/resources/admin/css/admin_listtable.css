@@ -4,3 +4,8 @@
 .checkAll_container>span {
     text-indent: 30px;
 }
+
+.button_container {
+    width: 100%;
+    text-align: center;
+}

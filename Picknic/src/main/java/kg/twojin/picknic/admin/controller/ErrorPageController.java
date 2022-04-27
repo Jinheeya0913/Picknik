@@ -5,12 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class UserSecssionController {
+public class ErrorPageController {
 
-    @RequestMapping(value = "/getUserList.mdo")
-    public ModelAndView userList () {
+
+    @RequestMapping(value = "/wrongacess.mdo")
+    public ModelAndView wrongAcess() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("admin_user_list");
+        mav.setViewName("admin_common_wrongAcess");
         return mav;
     }
+
+
+
 }

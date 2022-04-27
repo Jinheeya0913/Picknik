@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.jws.WebParam;
+
 
 @Controller
 public class AdminMenuController {
@@ -22,11 +24,21 @@ public class AdminMenuController {
 
     @RequestMapping(value = "/index.mdo")
     public ModelAndView adIndex() {
-        ModelAndView mv = new ModelAndView();
+        ModelAndView mav = new ModelAndView();
         // 임시적으로 헤더와 푸터만 지정. 로그인 성공 후 초기 페이지 생성하면 그걸로 교체
-        mv.setViewName("admin_common_indexPage");
-        return mv;
+        mav.setViewName("admin_common_indexPage");
+        return mav;
     }
+
+//    관리자 계정 생성 요청 페이지 만들 것!!!
+
+    @RequestMapping(value = "/requestSignin.mdo")
+    public ModelAndView requestSignin() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("");
+        return mav;
+    }
+
 
 
 
