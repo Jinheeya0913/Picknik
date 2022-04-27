@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -8,16 +9,105 @@
     <link rel="stylesheet" id="reset-css" href="../../../resources/user/css/reset.css" type="text/css" media="all"/>
     <link rel="stylesheet" id="common-css" href="../../../resources/user/css/common.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="../../../resources/user/css/user_cart.css"/>
-    <!--    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet"/>-->
-
 
     <!-- script -->
-    <!--    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>-->
-    <!--    <script src="../js/user_cart.js"></script>-->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
-    <!--            crossorigin="anonymous"></script>-->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>-->
 
+    <!-- 옵션선택 수량 팝업 -->
+    <script type="text/javascript">
+        function showPopup1() {
+            window.open("optionUpdate.html", "a", "width=600, height=400, left=100, top=50");
+        }
+    </script>
+
+
+    <!-- 전체선택  체크박스 -->
+    <script>
+        function selectAll(selectAll) {
+            const checkboxes = document.getElementsByName('select_all');
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+    </script>
+
+    <!-- 선택삭제 -->
+    <script>
+        function select_delete(selectPd) {
+            var tr = $j(obj).parent().parent();
+
+            tr.prev().remove();
+            tr.prev().remove();
+            tr.remove();
+        }
+    </script>
+
+    <!-- pc 삭제 버튼 -->
+    <script>
+    function delete_bt(delete_btn) {
+
+
+    }
+
+    </script>
+
+    <!-- ? -->
+    <script type="text/javascript">
+
+        /** 수량변경 버튼 클릭시 body에 클래스 토글 */
+
+        var $modal_open_btn = $('body').find('._modal_open_btn');
+        $modal_open_btn.off('click').on('click', function () {
+            $('body').toggleClass('modal-open', true);
+        });
+
+        var $modal_close_btn = $('body').find('._modal_close_btn');
+        $modal_close_btn.off('click').on('click', function () {
+            $('body').toggleClass('modal-open', false);
+        });
+
+        $('.html-popover').each(function () {
+            $(this).popover({
+                html: true
+            });
+            if ($(this).hasClass('deliv_price_info')) {
+                $(this).on("show.bs.popover", function (e) {
+                    $(this).data("bs.popover").tip().css({"max-width": "500px"});
+                });
+            }
+        });
+    </script>
+
+    <!-- 금액 계산 스크립트 -->
+    <script type="text/javascript">
+        var _products = (function () {
+            var c = {
+                pd: "151",
+                pn: "Lucien Carr Hand Wash",
+                am: "50000",
+                qy: '2',
+                ct: "Hand Wash"
+            };
+            var u = (!_products) ? [] : _products;
+            u['@' + c.pd] = c;
+            return u;
+        })();
+    </script>
+
+    <script type="text/javascript">
+        var _products = (function () {
+            var c = {
+                pd: "180",
+                pn: "Peace Keeper",
+                am: "20000",
+                qy: '1',
+                ct: "Tea"
+            };
+            var u = (!_products) ? [] : _products;
+            u['@' + c.pd] = c;
+            return u;
+        })();
+    </script>
 
     <title>장바구니</title>
 
@@ -42,14 +132,12 @@
             <table class="table no-margin shop-table">
                 <colgroup>
                     <col style="width:40px">
-                    <col>
                     <col style="width:80px">
                     <col style="width:120px">
                     <col style="width:130px">
                     <col style="width:130px">
                     <col style="width:150px">
                 </colgroup>
-
 
                 <!-- item 제목 -->
                 <thead class="item-subject">
@@ -58,156 +146,142 @@
                         <div class="checkbox checkbox-styled no-margin">
                             <label>
 
-                                <!--모두 선택 스크립트-->
-                                <input type="checkbox" value="" class="_all_check"
-                                       onclick="SITE_SHOP_CART.toggleAllCheckCartItem($(this).is(':checked'),'N');">
-                                <span></span>
+                                <!-- 체크박스 모두 선택-->
+                                <input type="checkbox" value="selectAll" name="select_all"
+                                       onclick="selectAll(this)">
 
                             </label>
                         </div>
                     </th>
 
-                    <!--전체선택 span은 숨김-->
-                    <th class="item-info">
+                    <!-- Table 타이틀 -->
+                    <th colspan="3" class="item-info">
                         <span class="hidden-sm hidden-xs">item</span>
+                        <!-- 모바일버전에서 셋팅 -->
                         <span class="hidden-lg hidden-md">전체선택</span>
                     </th>
 
                     <!--위시는 왜 있는지 모름-->
                     <th class="wish" style="display: none"><span class="hidden-sm hidden-xs">위시</span></th>
+
                     <th class="amount"><span class="hidden-sm hidden-xs">수량</span></th>
-                    <th class="deliv_price"><span class="hidden-sm hidden-xs">배송수단</span></th>
-                    <th class="deliv_price"><span class="hidden-sm hidden-xs">배송비</span></th>
+                    <!--  <th class="space_th"></th>-->
+                    <!--  <th class="deliv_price"><span class="hidden-sm hidden-xs">배송수단</span></th>-->
+                    <!--  <th class="deliv_price"><span class="hidden-sm hidden-xs">배송비</span></th>-->
                     <th class="price"><span class="hidden-sm hidden-xs">가격</span></th>
+                    <th></th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <!-- 금액 계산 스크립트 -->
-                <script language="javascript">
-                    var _products = (function () {
-                        var c = {
-                            pd: "151",
-                            pn: "Lucien Carr Hand Wash",
-                            am: "50000",
-                            qy: '2',
-                            ct: "Hand Wash"
-                        };
-                        var u = (!_products) ? [] : _products;
-                        u['@' + c.pd] = c;
-                        return u;
-                    })();
-                </script>
-
                 <tr class="content" style="overflow: visible;">
                     <td class="slt">
                         <div class="checkbox checkbox-styled no-margin">
                             <label>
-                                <input type="checkbox" value="i202204238d41f4012ad19" class="_cartItemCheckbox"
-                                       onclick="SITE_SHOP_CART.toggleCheckCartItem('N')" checked="checked">
+
+                                <!-- 첫번째 체크박스 -->
+                                <input type="checkbox" name="select_all" value="selectPd" id="first_check" class="_cartItemCheckbox">
                                 <span></span>
                             </label>
                         </div>
                     </td>
-                    <td class="img margin-bottom-xl td-blocked">
+
+
+                    <td colspan="3" class="img margin-bottom-xl td-blocked">
+
                         <a class="cart-item-wrap" href="/handwash/?idx=151">
+
                             <div class="cart-item-img">
+
                                 <img src="https://cdn.imweb.me/thumbnail/20210909/94cf9c2e82416.jpg" width="60"
                                      height="60" alt="cart item">
                             </div>
                             <p class="cart-item-title" id="shop_cart_title_i202204238d41f4012ad19">Lucien&nbsp;Carr&nbsp;Hand&nbsp;Wash</p>
                         </a>
-                        <div class="opt">
-                            <div class="more"><span><em>-</em> Small(18x27x9cm)&nbsp;/&nbsp;1개</span> <a
-                                    href="javascript:;"
-                                    onclick="SITE_SHOP_CART.removeCartItemOption('i202204238d41f4012ad19',0,'N')"
-                                    style="margin-left: 5px;"> <i class="btl bt-times-circle"
-                                                                  aria-hidden="true"></i><span class="hidden">삭제</span></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="_wish_status_i202204238d41f4012ad19 wish " style="display: none">
+
+
                         <!-- check class 추가시 활성화 상태로 변경-->
                         <a href="javascript:;"
                            onclick="if ($(this).parent().hasClass('check')) SITE_SHOP_CART.deleteProdWish('i202204238d41f4012ad19','N'); else SITE_SHOP_CART.addProdWish('i202204238d41f4012ad19','N');"><i
-                                class="btl bt-heart" aria-hidden="true"></i><span class="sr-only">좋아요</span></a>
+                                class="btl bt-heart" aria-hidden="true"></i></a>
                     </td>
-                    <td class="delete-wrap">
+
+                    <!-- pc 선택 삭제2 -->
+                    <td cosspan="2" class="delete-wrap">
                         <a class="btn-cart-delete btn hidden-sm hidden-md hidden-lg" href="javascript:;"
-                           onclick="SITE_SHOP_CART.removeCartItem('i202204238d41f4012ad19','N')"><i
+                           onclick="select_delete(this)"><i
                                 class="im-icon im-ico-delete"></i> <span class="sr-only"> 삭제</span></a>
                     </td>
+
+
                     <td class="amount td-blocked">
                         <div class="text-13 title text-center">
-                            <span class="hidden-lg hidden-md hiddden-sm">상품금액(</span><em
-                                class="hidden-lg hidden-md ">총</em> 2개 <em class="hidden-lg hidden-md hiddden-sm">)</em>
+                            <span class="hidden-lg hidden-md hiddden-sm">상품금액(</span>
+                            <em class="hidden-lg hidden-md ">총 </em>2개<em class="hidden-lg hidden-md hiddden-sm">)</em>
                         </div>
+
+                        <!-- mobile 상품금액1-->
                         <div class="hidden-lg hidden-md hiddden-sm cont blocked text-center">
                             51,000 KRW
                         </div>
+
+                        <!-- pc 수량변경 버튼 -->
                         <div class="text-center">
-							<span class="cart-btn-tools">
+                            <span class="cart-btn-tools">
 								<a href="javascript:;" class="btn hidden-xs _modal_open_btn"
-                                   onclick="SITE_SHOP_CART.showChangeCartItem('i202204238d41f4012ad19','N')">변경</a>
+                                   onclick="showPopup1();">변경</a>
+
                                 <!-- 아래 옵션 변경과 같은 기능. 모바일에선 해당 버튼은 사라지고 아래 옵션 변경 버튼이 노출-->
 							</span>
                         </div>
                     </td>
-                    <td class="td-blocked">
+                    <!--<td class="td-blocked">
                         <span class="hidden-lg hidden-md hiddden-sm title">배송수단</span>
                         <div class="cont text-12 text-center">
                             <div class="margin-bottom-lg">택배</div>
                         </div>
-                    </td>
-                    <td class="td-blocked">
-                        <span class="hidden-lg hidden-md hiddden-sm title">배송비</span>
-                        <div class="cont text-12 text-center">
-                            <span><span>무료</span></span>
-                            <a href="javascript:;" class="html-popover deliv_price_info" data-toggle="popover" title=""
-                               data-content="<div class=&quot;&quot;><label class=&quot;text-bold text-13&quot;>배송비 안내</label><div class=&quot;table-responsive&quot;><table class=&quot;table no-margin table-no-padding-x&quot;><caption class=&quot;text-bold no-padding-top&quot;>조건부 무료배송</caption><tr><td colspan=&quot;2&quot;><p>기본 배송비 3,000 KRW<br>50,000 KRW 이상 구매 시 무료배송</p></td></tr></table></div></div>"
-                               data-placement="auto" data-original-title="">
-                                <i class="btm bt-question-circle" aria-hidden="true"></i>
-                                <span class="sr-only">배송안내 툴팁</span>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="price td-blocked hidden-xs">51,000 KRW</td>
-                    <td class="cart-btn-tools">
-                        <a href="javascript:;" class="btn btn-cart-option hidden-lg hidden-md hidden-sm _modal_open_btn"
-                           onclick="SITE_SHOP_CART.showChangeCartItem('i202204238d41f4012ad19','N')">옵션 변경</a>
+                    </td>-->
+                    <!--                    <td class="td-blocked">-->
+                    <!--                        <span class="hidden-lg hidden-md hiddden-sm title">배송비</span>-->
+                    <!--                        <div class="cont text-12 text-center">-->
+                    <!--                            <span><span>무료</span></span>-->
+                    <!--                        </div>-->
+                    <!--                    </td>-->
 
+                    <!-- pc 상품 가격 1-->
+                    <td class="price td-blocked hidden-xs">
+                        <span>51,000 KRW</span>
+                    </td>
+                    <td class="cart-btn-tools">
+                        <!--                        <a href="javascript:;" class="btn btn-cart-option hidden-lg hidden-md hidden-sm _modal_open_btn"-->
+                        <!--                           onclick="SITE_SHOP_CART.showChangeCartItem('i202204238d41f4012ad19','N')">옵션 변경</a>-->
+
+                        <!-- mobile 수량 변경1 -->
                         <a class="btn btn-cart-order" href="javascript:;"
-                           onclick="SITE_SHOP_CART.addOrderWithCart('guest_login', '')">주문</a>
-                        <a class="btn-cart-delete btn hidden-xs" href="javascript:;"
-                           onclick="SITE_SHOP_CART.removeCartItem('i202204238d41f4012ad19','N')"><i
+                           onclick="showPopup1();">수량변경</a>
+
+                        <!-- mobile 선택 삭제1-->
+                        <a class="btn-cart-delete btn hidden-xs" value="delete_btn"
+                           href="javascript:;" onclick="delete_bt(this)"><i
                                 class="im-icon im-ico-delete"></i> <span class="sr-only"> 삭제</span></a>
                     </td>
+
                 </tr>
-                <script language="javascript">
-                    var _products = (function () {
-                        var c = {
-                            pd: "180",
-                            pn: "Peace Keeper",
-                            am: "20000",
-                            qy: '1',
-                            ct: "Tea"
-                        };
-                        var u = (!_products) ? [] : _products;
-                        u['@' + c.pd] = c;
-                        return u;
-                    })();
-                </script>
+
                 <tr class="content" style="overflow: visible;">
                     <td class="slt">
                         <div class="checkbox checkbox-styled no-margin">
                             <label>
-                                <input type="checkbox" value="i202204236b74d0a442b52" class="_cartItemCheckbox"
-                                       onclick="SITE_SHOP_CART.toggleCheckCartItem('N')" checked="checked"><span></span>
+
+                                <!-- 두번째 체크박스 -->
+                                <input type="checkbox" name="select_all" value="selectPd" id="second_check" class="_cartItemCheckbox">
+
                             </label>
                         </div>
                     </td>
-                    <td class="img margin-bottom-xl td-blocked">
+
+                    <td colspan="3" class="img margin-bottom-xl td-blocked">
                         <a class="cart-item-wrap" href="/tea/?idx=180">
                             <div class="cart-item-img">
                                 <img src="https://cdn.imweb.me/thumbnail/20211227/70d428c837fe2.jpg" width="60"
@@ -215,72 +289,85 @@
                             </div>
                             <p class="cart-item-title" id="shop_cart_title_i202204236b74d0a442b52">Peace&nbsp;Keeper</p>
                         </a>
-                        <div class="opt">
-                            <div class="more"><span><em>-</em> 쇼핑백&nbsp;S(18x27x9cm)&nbsp;/&nbsp;1개</span> <a
-                                    href="javascript:;"
-                                    onclick="SITE_SHOP_CART.removeCartItemOption('i202204236b74d0a442b52',0,'N')"
-                                    style="margin-left: 5px;"> <i class="btl bt-times-circle"
-                                                                  aria-hidden="true"></i><span class="hidden">삭제</span></a>
-                            </div>
-                        </div>
+                        <!--                        <div class="opt">-->
+                        <!--                            <div class="more"><span><em>-</em> 쇼핑백&nbsp;S(18x27x9cm)&nbsp;/&nbsp;1개</span> <a-->
+                        <!--                                    href="javascript:;"-->
+                        <!--                                    onclick="SITE_SHOP_CART.removeCartItemOption('i202204236b74d0a442b52',0,'N')"-->
+                        <!--                                    style="margin-left: 5px;"> <i class="btl bt-times-circle"-->
+                        <!--                                                                  aria-hidden="true"></i><span class="hidden">삭제</span></a>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </td>
+
+
                     <td class="_wish_status_i202204236b74d0a442b52 wish " style="display: none">
                         <!-- check class 추가시 활성화 상태로 변경-->
                         <a href="javascript:;"
                            onclick="if ($(this).parent().hasClass('check')) SITE_SHOP_CART.deleteProdWish('i202204236b74d0a442b52','N'); else SITE_SHOP_CART.addProdWish('i202204236b74d0a442b52','N');"><i
                                 class="btl bt-heart" aria-hidden="true"></i><span class="sr-only">좋아요</span></a>
                     </td>
-                    <td class="delete-wrap">
+
+                    <!-- pc 선택삭제1 -->
+                    <td colspan="2" class="delete-wrap">
                         <a class="btn-cart-delete btn hidden-sm hidden-md hidden-lg" href="javascript:;"
-                           onclick="SITE_SHOP_CART.removeCartItem('i202204236b74d0a442b52','N')"><i
+                           onclick="select_delete"><i
                                 class="im-icon im-ico-delete"></i> <span class="sr-only"> 삭제</span></a>
                     </td>
+
                     <td class="amount td-blocked">
                         <div class="text-13 title text-center">
                             <span class="hidden-lg hidden-md hiddden-sm">상품금액(</span><em
                                 class="hidden-lg hidden-md ">총</em> 1개 <em class="hidden-lg hidden-md hiddden-sm">)</em>
                         </div>
+
+                        <!-- mobile 상품 가격 2 -->
                         <div class="hidden-lg hidden-md hiddden-sm cont blocked text-center">
                             21,000 KRW
                         </div>
+
+                        <!-- pc 수량 변경2 -->
                         <div class="text-center">
-									<span class="cart-btn-tools">
-										<a href="javascript:;" class="btn hidden-xs _modal_open_btn"
-                                           onclick="SITE_SHOP_CART.showChangeCartItem('i202204236b74d0a442b52','N')">변경</a>
-                                        <!-- 아래 옵션 변경과 같은 기능. 모바일에선 해당 버튼은 사라지고 아래 옵션 변경 버튼이 노출-->
-									</span>
+                            <span class="cart-btn-tools">
+                                <a href="javascript:;" class="btn hidden-xs _modal_open_btn"
+                                   onclick="showPopup1();">변경</a>
+                                <!-- 아래 옵션 변경과 같은 기능. 모바일에선 해당 버튼은 사라지고 아래 옵션 변경 버튼이 노출-->
+                            </span>
                         </div>
                     </td>
-                    <td class="td-blocked">
-                        <span class="hidden-lg hidden-md hiddden-sm title">배송수단</span>
-                        <div class="cont text-12 text-center">
-                            <div class="margin-bottom-lg">택배</div>
-                        </div>
-                    </td>
-                    <td class="td-blocked">
-                        <span class="hidden-lg hidden-md hiddden-sm title">배송비</span>
-                        <div class="cont text-12 text-center">
-                            <span><span>3,000 KRW</span></span> <a href="javascript:;"
-                                                                   class="html-popover deliv_price_info"
-                                                                   data-toggle="popover" title=""
-                                                                   data-content="<div class=&quot;&quot;><label class=&quot;text-bold text-13&quot;>배송비 안내</label><div class=&quot;table-responsive&quot;><table class=&quot;table no-margin table-no-padding-x&quot;><caption class=&quot;text-bold no-padding-top&quot;>조건부 무료배송</caption><tr><td colspan=&quot;2&quot;><p>기본 배송비 3,000 KRW<br>50,000 KRW 이상 구매 시 무료배송</p></td></tr></table></div></div>"
-                                                                   data-placement="auto" data-original-title="">
-                            <i class="btm bt-question-circle" aria-hidden="true"></i>
-                            <span class="sr-only">배송안내 툴팁</span>
-                        </a>
-                        </div>
-                    </td>
+
+                    <!-- 배송 수단 -->
+                    <!--                    <td class="td-blocked">-->
+                    <!--                        <span class="hidden-lg hidden-md hiddden-sm title">배송수단</span>-->
+                    <!--                        <div class="cont text-12 text-center">-->
+                    <!--                            <div class="margin-bottom-lg">택배</div>-->
+                    <!--                        </div>-->
+                    <!--                    </td>-->
+
+                    <!-- 배송비 -->
+                    <!--                    <td class="td-blocked">-->
+                    <!--                        <span class="hidden-lg hidden-md hiddden-sm title">배송비</span>-->
+                    <!--                        <div class="cont text-12 text-center">-->
+                    <!--                            <span><span>3,000 KRW</span></span>-->
+                    <!--                        </div>-->
+                    <!--                    </td>-->
+
+                    <!-- pc 상품 가격2 -->
                     <td class="price td-blocked hidden-xs">21,000 KRW</td>
                     <td class="cart-btn-tools">
-                        <a href="javascript:;" class="btn btn-cart-option hidden-lg hidden-md hidden-sm _modal_open_btn"
-                           onclick="SITE_SHOP_CART.showChangeCartItem('i202204236b74d0a442b52','N')">옵션 변경</a>
+                        <!--                        <a href="javascript:;" class="btn btn-cart-option hidden-lg hidden-md hidden-sm _modal_open_btn"-->
+                        <!--                           onclick="SITE_SHOP_CART.showChangeCartItem('i202204236b74d0a442b52','N')">옵션 변경</a>-->
 
+                        <!-- mobile 수량 변경2 -->
                         <a class="btn btn-cart-order" href="javascript:;"
-                           onclick="SITE_SHOP_CART.addOrderWithCart('guest_login', '')">주문</a>
-                        <a class="btn-cart-delete btn hidden-xs" href="javascript:;"
-                           onclick="SITE_SHOP_CART.removeCartItem('i202204236b74d0a442b52','N')"><i
-                                class="im-icon im-ico-delete"></i> <span class="sr-only"> 삭제</span></a>
+                           onclick="showPopup1();">수량변경</a>
+
+                        <!-- mobile 선택 삭제2 -->
+                        <a class="btn-cart-delete btn hidden-xs" value="delete_btn"
+                        href="javascript:;" onclick="delete_bt(this)"><i class="im-icon im-ico-delete"></i>
+                            <span class="sr-only">삭제</span></a>
                     </td>
+
+
                 </tr>
                 <!-- AceCounter Log Gathering Script V.7.5.AMZ2019080601 -->
                 <script language="JavaScript">var _AceGID = (function () {
@@ -310,6 +397,7 @@
                     }
                 })();</script><!-- AceCounter Log Gathering Script End -->
 
+                <!--상품 가격 및 배송비 영역 -->
                 <tr class="payment-info">
                     <td colspan="5"></td>
                     <td class="pay-txt">
@@ -319,16 +407,18 @@
                     </td>
                     <td class="pay-number">
                         <p class="_cart_price holder">
-                            <span class="opacity-0">상품가격</span>
+                            <!-- 금액 + -->
                             <span class="fake-area">72,000 KRW</span>
                         </p>
                         <p class="_cart_deliv_price holder">
                             <span class="opacity-0">배송비</span>
+                            <!-- + 배송비 -->
                             <span class="fake-area">무료</span>
                         </p>
                     </td>
                 </tr>
-            </tbody>
+                </tbody>
+
                 <script>SITE_SHOP_CART.addSelectedCartItem('i202204238d41f4012ad19');
                 SITE_SHOP_CART.addSelectedCartItem('i202204236b74d0a442b52');</script>
                 <script>SITE_SHOP_CART.toggleAllSelectCk();</script>
@@ -337,11 +427,10 @@
 
                     <!-- 선택상품 삭제 -->
                     <td class="cart-btn-tools" colspan="5">
-                        <a href="javascript:;" class="btn" onclick="SITE_SHOP_CART.removeSelectedCartItem('N')">선택상품
-                            삭제</a>
+                        <a href="javascript:;" class="btn" onclick="select_delete">선택상품 삭제</a>
                     </td>
 
-
+                    <!-- 총 결제 금액 -->
                     <td class="amount txt"><span>결제금액</span></td>
                     <td class="amount text-brand">
                         <span style="font-size: 20px; font-weight: 600; word-break: keep-all;"
@@ -351,33 +440,6 @@
                 </tr>
                 </tfoot>
             </table>
-
-            <script type="text/javascript">
-                /**
-                 * 수량변경 버튼 클릭시 body에 클래스 토글
-                 */
-
-                var $modal_open_btn = $('body').find('._modal_open_btn');
-                $modal_open_btn.off('click').on('click', function () {
-                    $('body').toggleClass('modal-open', true);
-                });
-
-                var $modal_close_btn = $('body').find('._modal_close_btn');
-                $modal_close_btn.off('click').on('click', function () {
-                    $('body').toggleClass('modal-open', false);
-                });
-
-                $('.html-popover').each(function () {
-                    $(this).popover({
-                        html: true
-                    });
-                    if ($(this).hasClass('deliv_price_info')) {
-                        $(this).on("show.bs.popover", function (e) {
-                            $(this).data("bs.popover").tip().css({"max-width": "500px"});
-                        });
-                    }
-                });
-            </script>
 
 
         </div>
@@ -389,40 +451,40 @@
                 <a class="btn bg-brand to-order _fade_link _btn_order" href="javascript:;"
                    onclick="SITE_SHOP_CART.addOrderWithCart('guest_login', '')" style="display: flex;">주문하기</a>
 
-                    </div>
+            </div>
 
-                    <a href="#shop" class="shop_" style="">계속 쇼핑하기</a>
+            <a href="#shop" class="shop_" style="">계속 쇼핑하기</a>
 
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 수량변경 클릭시 노출되는 모달 -->
+<div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"
+     class="modal in modal_widget_cartopt" style="display:none" id="shop_cart_change_layer">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="layer_pop">
+                <div class="top-block">
+                    <div class="set-tit text-center">옵션 변경</div>
+                    <a href="javascript:;" data-dismiss="modal"
+                       class="bt-close bt bt-flat bt-default _modal_close_btn"
+                       onclick="SITE_SHOP_CART.hideChangeCartItem()"><i class="btl bt-times"></i></a>
+                </div>
+                <div class="container-fluid" style="max-height: 570px; overflow-y: auto;">
+
+                </div>
+                <div class="bottom-btn">
+                    <a href="javascript:;" class="btn btn-cancel _modal_close_btn" style="background: #fff;"
+                       onclick="SITE_SHOP_CART.hideChangeCartItem()">취소</a>
+                    <a href="javascript:;" class="btn _modal_close_btn bg-brand to-order"
+                       onclick="SITE_SHOP_CART.changeCartItemComplete('https://granhand.com/shop_cart')">변경</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- 수량변경 클릭시 노출되는 모달 -->
-    <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"
-         class="modal in modal_widget_cartopt" style="display:none" id="shop_cart_change_layer">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="layer_pop">
-                    <div class="top-block">
-                        <div class="set-tit text-center">옵션 변경</div>
-                        <a href="javascript:;" data-dismiss="modal"
-                           class="bt-close bt bt-flat bt-default _modal_close_btn"
-                           onclick="SITE_SHOP_CART.hideChangeCartItem()"><i class="btl bt-times"></i></a>
-                    </div>
-                    <div class="container-fluid" style="max-height: 570px; overflow-y: auto;">
-
-                    </div>
-                    <div class="bottom-btn">
-                        <a href="javascript:;" class="btn btn-cancel _modal_close_btn" style="background: #fff;"
-                           onclick="SITE_SHOP_CART.hideChangeCartItem()">취소</a>
-                        <a href="javascript:;" class="btn _modal_close_btn bg-brand to-order"
-                           onclick="SITE_SHOP_CART.changeCartItemComplete('https://granhand.com/shop_cart')">변경</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </div>
 </div>
 </div>
@@ -433,195 +495,3 @@
 
 </body>
 </html>
-
-<!--            <div id="layoutSidenav_content">-->
-<!--                <main>-->
-<!--                    <div class="container-fluid px-4">-->
-
-<!--                        <div class="cartList_section">-->
-<!--                        <span class="mt-4">Cart list</span>-->
-<!--                        &lt;!&ndash; 장바구니 비우기 &ndash;&gt;-->
-<!--                        <button type="submit" class="recyclebin_btn" name="recyclebin_btn" value="장바구니 비우기">장바구니 비우기-->
-<!--                        </button>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; 구분선 &ndash;&gt;-->
-<!--                        <div class="section_line"></div>-->
-
-<!--                        <div class="card mb-4">-->
-
-<!--                            <div class="card-body">-->
-
-<!--                                <table id="datatablesSimple">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th class="select_op">선택</th>-->
-<!--                                        <th>이미지</th>-->
-<!--                                        <th>상품</th>-->
-<!--                                        <th>단가</th>-->
-<!--                                        <th>수량</th>-->
-<!--                                        <th>총가격</th>-->
-<!--                                        <th></th>-->
-<!--                                    </tr>-->
-<!--                                    </thead>-->
-<!--                                    <tbody>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">poster</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                        <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="goods_list"><input type="checkbox" class="list_check" name="check"></td>-->
-<!--                                        <td class="goods_list"><img src="../resources/img1.png" class="list_img"></src></td>-->
-<!--                                        <td class="goods_list" name="goods">magnet</td>-->
-<!--                                        <td class="goods_list" name="g_price">6500원</td>-->
-<!--                                        <td class="goods_list" name="g_amount"><img src="../resources/down_btn.png" class="down_btn">1-->
-<!--                                            <img src="../resources/up_btn.png" class="up_btn"></td>-->
-<!--                                        <td class="goods_list" name="g_totalPrice">6500원</td>-->
-<!--                                        <td class="goods_list"><button class="delete_btn" value="삭제">삭제</button></td>-->
-<!--                                    </tr>-->
-<!--                                    </tbody>-->
-<!--                                </table>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </main>-->
-<!--            </div>-->
-
-<!--            <div class="section_line1"></div>-->
-
-<!--            <table id="table_totalValue">-->
-
-<!--                <thead>-->
-<!--                <tr id="total_title">-->
-<!--                    <th>소계</th>-->
-<!--                    <th>배송비</th>-->
-<!--                    <th>총계</th>-->
-<!--                </tr>-->
-<!--                </thead>-->
-
-<!--                <tbody>-->
-<!--                <tr id="total_value">-->
-<!--                    <td name="subTotal">15000원</td>-->
-<!--                    <td name="shippingValue">3000원</td>-->
-<!--                    <td name="Total">18000원</td>-->
-<!--                </tr>-->
-<!--                </tbody>-->
-<!--            </table>-->
-
-<!--            <div class="btn_section">-->
-<!--                &lt;!&ndash; 결제하기 버튼 &ndash;&gt;-->
-<!--                <button type="submit" class="payment_submit_btn" name="payment_btn" value="결제하기">결제하기-->
-<!--                </button>-->
-<!--            </div>-->
-
-<!--            <div class="section_line2"></div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
-
-
-<!--</div> &lt;!&ndash; cart_list_section &ndash;&gt;-->
-
-<!--</div>-->
-
-<!--</div>-->
-
