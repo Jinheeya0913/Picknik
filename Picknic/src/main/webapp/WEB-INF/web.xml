@@ -48,13 +48,27 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/config/user-servlet.xml</param-value>
+            <param-value>classpath:config/user-servlet.xml</param-value>
         </init-param>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>do</servlet-name>
         <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mdo</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:config/admin-servlet.xml</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>mdo</servlet-name>
+        <url-pattern>*.mdo</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
